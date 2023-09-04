@@ -7,8 +7,8 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = 'SPC software courses'
-copyright = '2023, Mikhail Zelenyi et al.'
-author = 'Mikhail Zelenyi et al.'
+copyright = '2023, Mikhail Zelenyi et al'
+author = 'Mikhail Zelenyi et al'
 release = '2023.09'
 
 # -- General configuration ---------------------------------------------------
@@ -16,7 +16,8 @@ release = '2023.09'
 
 extensions = [
     'sphinx_rtd_theme',
-    'myst_parser'
+    'myst_parser',
+    'sphinx.ext.todo'
 ]
 
 templates_path = ['_templates']
@@ -29,6 +30,8 @@ source_suffix = {
     '.txt': 'markdown',
     '.md': 'markdown',
 }
+
+todo_include_todos = True
 
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
