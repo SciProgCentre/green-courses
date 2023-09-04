@@ -10,5 +10,6 @@
    cards/installation/installation.md
    cards/run/run.md
    pages/general_python/scikit_py.md
+   pages/StudentEdition/notebooks.md
    pages/TeacherEdition/introduction.md
 ```

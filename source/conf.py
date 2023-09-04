@@ -17,7 +17,8 @@ release = '2023.09'
 extensions = [
     'sphinx_rtd_theme',
     'myst_parser',
-    'sphinx.ext.todo'
+    'sphinx.ext.todo',
+    'jupyterlite_sphinx'
 ]
 
 templates_path = ['_templates']
@@ -32,6 +33,11 @@ source_suffix = {
 }
 
 todo_include_todos = True
+
+myst_enable_extensions = [
+    "amsmath",
+    "dollarmath"
+]
 
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
