@@ -3,3 +3,4 @@ sphinx_rtd_theme
 myst-parser
 jupyterlite-sphinx
 jupyterlite-pyodide-kernel
+sphinx-plantuml
