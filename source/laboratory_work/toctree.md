@@ -1,10 +1,10 @@
-# Домашняя работа 2023
+# Лабораторные работы по Python
 
 ```{eval-rst}
 .. toctree::
    :maxdepth: 1
    :caption: Оглавление:
 
-   ./01.md
-   ./02.md
+   ./translators.md  
+   
 ```
