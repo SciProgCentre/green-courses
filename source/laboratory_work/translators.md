@@ -1,19 +1,26 @@
 # Лабораторная работа "Трансляторы Python"
-В данной работе Вам предстоит измерить перфоманс различных интерпретаторов Python3 на задаче вычисления [множества Мандельброта](https://ru.wikipedia.org/wiki/Множество_Мандельброта). Замеры производительности каждого интепретаторов предстоит провести на трех кейсах: вычисление на чистом Python без [typing](https://docs.python.org/3/library/typing.html), с использованием typing и с использованием библиотеки numpy.
+
+В данной работе Вам предстоит познакомиться с различными интерпретаторами Python3 на примере задачи вычисления [множества Мандельброта](https://ru.wikipedia.org/wiki/Множество_Мандельброта), а так же измерить производительность интерпретатора. Работу интепретаторов предстоит проверить на трех примерах: вычисление на чистом Python без [Typing Hints](https://docs.python.org/3/library/typing.html), с использованием Typing Hints и с использованием библиотеки `numpy`.
 
 ## Задание
 
-Ниже дан список интепретаторов, каждый из которых вам необходимо установить и запустить ими тестовые функции из раздела "Тестовые функции". Если тестовая функция не запускается, объясните причину. Далее необходимо замерить время выполнения функций с помощью кода из раздела "Замер производительности".
+Для заданных Вам из данного ниже списка интерпретаторов, необхожимо сделать следующие дествия:
+
+1. Установить интерпретатор, удобным вам способом (если это необходимо).
+2. Запустить ими тестовые функции из раздела "Тестовые функции". Если тестовая функция не запускается, объясните причину.
+3. Измерьте время выполнения функций с помощью кода из раздела "Замер производительности", а так же полное время работы м запуска скрипта.
 
 ## Интепретаторы
-1. [Последний PyPy для Python 3.9](https://www.pypy.org/download.html)
-2. [Pypy 5.7](https://downloads.python.org/pypy/)
-3. [CPython](https://www.python.org/downloads/) - версии 3.8, 3.9, 3.10
-4. [Jython](https://www.jython.org/index)
-5. [Ironpython](https://ironpython.net/download/)
-6. [Pyodide](https://github.com/pyodide/pyodide)
-7. [Xeus](https://github.com/jupyter-xeus/xeus-python)
-8. [Python .NET](https://pythonnet.github.io/)
+
+1. [CPython](https://www.python.org/downloads/) - версии 3.8 или 3.9, 
+2. [CPython](https://www.python.org/downloads/) - версии 3.11 или 3.12
+3. [Pypy 5.7](https://downloads.python.org/pypy/)
+4. [Последний PyPy для Python 3.9](https://www.pypy.org/download.html)
+5. [Jython](https://www.jython.org/index)
+6. [Python .NET](https://pythonnet.github.io/)
+7. [Ironpython](https://ironpython.net/download/)
+8. [Pyodide](https://github.com/pyodide/pyodide)
+9. [Xeus](https://github.com/jupyter-xeus/xeus-python)
 
 ## Тестовые функции
 
