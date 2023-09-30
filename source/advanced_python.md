@@ -8,5 +8,6 @@
    pages/advanced_python/course_program.md
    pages/advanced_python/lesson_plan.md
    pages/advanced_python/2023/hw/toctree.md
+   pages/advanced_python/2023/lecture.md
    cards/toctree.md
 ```

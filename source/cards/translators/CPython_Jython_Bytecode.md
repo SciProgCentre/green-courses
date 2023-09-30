@@ -78,3 +78,9 @@ python3 -OO compile_example.py
    print(dis.dis(add))
    print(dis.opmap["LOAD_GLOBAL"]); # optcode
 ```
+
+```todo
+import dis
+dis.dis("a=1;a+=1;")
+dis.dis("a=1;a = a + 1;")
+```

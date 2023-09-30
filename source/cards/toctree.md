@@ -10,6 +10,10 @@
    toolchain/docs.md
    toolchain/ci_cd.md
    translators/translators.md   
-   translators/CPython_Jython_Bytecode.md   
+   translators/CPython_Jython_Bytecode.md
+   lexical_and_syntax/header.md
+   lexical_and_syntax/grammar.md
+   lexical_and_syntax/scopes.md
+   lexical_and_syntax/data_model.md
    
 ```
