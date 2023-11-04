@@ -15,5 +15,6 @@
    lexical_and_syntax/grammar.md
    lexical_and_syntax/scopes.md
    lexical_and_syntax/data_model.md
+   CLI/cmd.md
    
 ```
