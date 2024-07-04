@@ -12,6 +12,10 @@
 
 [//]: # (```)
 
+```{include} ../../source/cards/toolchain/ide.md
+:heading-offset: 1
+:relative-images:
+```
 
 ```{include} ../../source/cards/toolchain/ci_cd.md
 :heading-offset: 1
