@@ -11,6 +11,7 @@
    toolchain/ci_cd.md
    translators/translators.md   
    translators/CPython_Jython_Bytecode.md
+   translators/usefull_links.md
    lexical_and_syntax/header.md
    lexical_and_syntax/grammar.md
    lexical_and_syntax/scopes.md
