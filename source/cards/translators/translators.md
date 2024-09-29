@@ -29,3 +29,7 @@
 ```
 * [Xeus](https://github.com/jupyter-xeus/xeus-python) --- is a Jupyter kernel for Python based on the native implementation of the Jupyter protocol [xeus](https://github.com/jupyter-xeus/xeus).
 * [Pyodide](https://pyodide.org/en/stable/) --- CPython скомпилированный под [WebAssembly](https://webassembly.org/).
+```{revealjs-break}
+```
+* [Pyston](https://github.com/pyston/pyston)
+* [GraalPy](https://www.graalvm.org/python/)
