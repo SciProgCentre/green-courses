@@ -6,4 +6,5 @@
    :caption: Оглавление:
 
    ./01.md
+   ./stem_assignment.md
 ```
