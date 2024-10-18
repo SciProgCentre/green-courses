@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ru" >
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Программа курса &mdash; документация SPC software courses 2023.09</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../https://fonts.googleapis.com/css?family=Vibur" type="text/css" />
+      <link rel="stylesheet" href="../../_static/jupyterlite_sphinx.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../_static/documentation_options.js?v=209f7d96"></script>
+        <script src="../../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../../_static/jupyterlite_sphinx.js?v=d6bdf5f8"></script>
+        <script src="../../_static/translations.js?v=29b1f277"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Алфавитный указатель" href="../../genindex.html" />
+    <link rel="search" title="Поиск" href="../../search.html" />
+    <link href="../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            SPC software courses
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Поиск в документации" aria-label="Поиск в документации" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Меню навигации">
+              <p class="caption" role="heading"><span class="caption-text">Список материалов:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../laboratory_python.html">Использование Python в лабораторном практикуме</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../beginner_python.html">Начала программирования на Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced_python.html">Продвинутое программирование на Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../laboratory_work/toctree.html">Лабораторные работы по Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference.html">Источники — полезное для саморазвития дополнительное чтение</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../authors.html">Авторы и контакты</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Меню навигации для мобильных устройств" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">SPC software courses</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Навигация по страницам">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Программа курса</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/pages/advanced_python/course_program.md.txt" rel="nofollow"> Просмотреть исходный код страницы</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section class="tex2jax_ignore mathjax_ignore" id="id1">
+<h1>Программа курса<a class="headerlink" href="#id1" title="Link to this heading"></a></h1>
+<section id="id2">
+<h2>Идеология и инструменты разработки ПО<a class="headerlink" href="#id2" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Инструменты разработки на Python.</p></li>
+<li><p>Создание виртуальных окружений. Модули <code class="docutils literal notranslate"><span class="pre">venv</span></code>, <code class="docutils literal notranslate"><span class="pre">virtualenv</span></code>. Виртуальные окружения conda-env.</p></li>
+<li><p>Сборка пакета с <code class="docutils literal notranslate"><span class="pre">setuptools</span></code> и установка пакета в режиме для разработчика.</p></li>
+<li><p>Тестирование ПО. Модули <code class="docutils literal notranslate"><span class="pre">unittest</span></code>, <code class="docutils literal notranslate"><span class="pre">pytest</span></code>. Системы запуска и контроля тестов.</p></li>
+<li><p>Создание документации пакета с помощью <code class="docutils literal notranslate"><span class="pre">sphinx</span></code>.</p></li>
+<li><p>CI/CD. Github Actions.</p></li>
+<li><p>Интерактивные среды.</p></li>
+<li><p>Распространения приложений с помощью <code class="docutils literal notranslate"><span class="pre">setuptools</span></code>.</p></li>
+</ol>
+</section>
+<section id="python">
+<h2>Устройство Python<a class="headerlink" href="#python" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Трансляторы Python. Байт-код Python и модуль <code class="docutils literal notranslate"><span class="pre">dis</span></code>.</p></li>
+<li><p>Синтаксис Python. Области видимости переменных.</p></li>
+<li><p>ООП и объектная модель Python.</p>
+<ol class="arabic simple">
+<li><p>Семантика Python.</p></li>
+<li><p>Использование модуля <code class="docutils literal notranslate"><span class="pre">inspect</span></code> для анализа объектов.</p></li>
+</ol>
+</li>
+<li><p>Система импорта Python. Импорт модулей и пакетов. Использование модуля <code class="docutils literal notranslate"><span class="pre">importlib</span></code>.</p></li>
+<li><p>Работа с памятью в Python. Доступ к сборщику мусора через модуль <code class="docutils literal notranslate"><span class="pre">gc</span></code>.</p></li>
+</ol>
+</section>
+<section id="id3">
+<h2>ООП в Python. Структурная типизация.<a class="headerlink" href="#id3" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>ООП. Создание интерфейсов и абстрактных классов с модулем <code class="docutils literal notranslate"><span class="pre">abc</span></code>.</p></li>
+<li><p>Протоколы и структурная типизация с модулем <code class="docutils literal notranslate"><span class="pre">typing</span></code>. Статическая проверка типов с <code class="docutils literal notranslate"><span class="pre">mypy</span></code>.</p></li>
+<li><p>Контекстные менеджеры.</p></li>
+<li><p>Создание перечислений с модулем <code class="docutils literal notranslate"><span class="pre">enum</span></code>.</p></li>
+<li><p>Датаклассы в Python.</p></li>
+<li><p>Дескрипторы Python.</p></li>
+</ol>
+</section>
+<section id="id4">
+<h2>Функциональное программирование в Python. Коллекции и дата-классы<a class="headerlink" href="#id4" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Функциональное программирование в Python.</p></li>
+<li><p>Итераторы и коллекции. Модули <code class="docutils literal notranslate"><span class="pre">itertools</span></code> и <code class="docutils literal notranslate"><span class="pre">collection</span></code>.</p></li>
+<li><p>Функциональное программирование c модулем <code class="docutils literal notranslate"><span class="pre">functools</span></code>.</p></li>
+<li><p>Декораторы функций и классов.</p></li>
+<li><p>Создание дата-классов с помощью декоратора <code class="docutils literal notranslate"><span class="pre">&#64;dataclass</span></code>.</p></li>
+<li><p>Генерация и обработка исключений.</p></li>
+</ol>
+</section>
+<section id="id5">
+<h2>Разработка приложений и библиотек. Создание консольных приложений. Инструменты стандартной библиотеки.<a class="headerlink" href="#id5" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Логирование с модулем <code class="docutils literal notranslate"><span class="pre">logging</span></code></p></li>
+<li><p>Генерация скрипта для консольной оболочки ОС с помощью <code class="docutils literal notranslate"><span class="pre">setuptools</span></code></p></li>
+<li><p>Парсинг аргументов командной строки с модулем <code class="docutils literal notranslate"><span class="pre">argparse</span></code></p></li>
+<li><p>Создание консольного приложения с модулем <code class="docutils literal notranslate"><span class="pre">cmd</span></code>.</p></li>
+<li><p>Время и дата. Модули datetime, <code class="docutils literal notranslate"><span class="pre">time</span></code></p></li>
+<li><p>Работа с операционной системой через модули <code class="docutils literal notranslate"><span class="pre">os</span></code>, <code class="docutils literal notranslate"><span class="pre">sys</span></code> и <code class="docutils literal notranslate"><span class="pre">shutil</span></code>. Запуск дочерних процессов с модулем subprocess</p></li>
+</ol>
+</section>
+<section id="id6">
+<h2>Работа с файловой системой<a class="headerlink" href="#id6" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Работа с путями с помощью модуля pathlib</p></li>
+<li><p>Модуль io</p></li>
+<li><p>Использование модуля tempfile для создания временных файлов</p></li>
+<li><p>Системы конфигурация HYDRA и OmegaConf</p></li>
+<li><p>Модуль appdirs</p></li>
+</ol>
+</section>
+<section id="id7">
+<h2>Форматы данных и файлов. Сериализация/Дессераилизацияю<a class="headerlink" href="#id7" title="Link to this heading"></a></h2>
+<section id="id8">
+<h3>Текстовые данные и файлы.<a class="headerlink" href="#id8" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>Строки: модули string и template, f-strings.</p></li>
+<li><p>Форматирование таблиц с модулем tabulate</p></li>
+<li><p>Формат CSV и модуль csv</p></li>
+<li><p>Формат JSON, валидация с помощью JSOM Schema и модули json, jsonschema, json-schema-for-humans</p></li>
+<li><p>Формат XML и модули xml, lxml</p></li>
+<li><p>YAML</p></li>
+<li><p>Работа с архивами с модулями zipfile и tarfile</p></li>
+<li><p>Последовательная обработка нескольких файлов с помощью модуля fileinput</p></li>
+<li><p>Numpy IO: работа с текстовыми файлами</p></li>
+<li><p>Шаблонизатор jinja2</p></li>
+<li><p>Чтение данных с помошью Pandas</p></li>
+</ol>
+</section>
+<section id="id9">
+<h3>Бинарные данные и файлы.<a class="headerlink" href="#id9" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>Типа данных bytes</p></li>
+<li><p>Чтение Си-структур с помощью модуля struct</p></li>
+<li><p>Numpy nd-arrays</p></li>
+<li><p>Numpy IO: файлы форматов NPY и NPZ</p></li>
+<li><p>Парсинг выражений с модулем numexp</p></li>
+<li><p>Консервация объектов. Модули pickle и shelve</p></li>
+<li><p>Формат Google Protobuff</p></li>
+<li><p>Memory mapping и модуль mmap</p></li>
+<li><p>Common Data Model</p></li>
+<li><p>Чтение файлов CERN ROOT с помощью модуля uproot</p></li>
+<li><p>Профилировка с модулем profile</p></li>
+</ol>
+</section>
+</section>
+<section id="gil">
+<h2>Многопоточное, асинхронное и параллельное исполнение. GIL<a class="headerlink" href="#gil" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Вытесняющая многозадачность и модуль threading</p></li>
+<li><p>Кооперативная многозадачность и модуль asyncio</p></li>
+<li><p>Параллельное исполнение с модулем multyprocessing</p></li>
+</ol>
+</section>
+<section id="web">
+<h2>Сетевое программирование и WEB<a class="headerlink" href="#web" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Сокеты. UPD и TCP. Модули socket и socketserver</p></li>
+<li><p>HTTP. Модули http и request</p></li>
+<li><p>HTML. GET и POST запросы. .</p></li>
+<li><p>Асинхронный сервер с asyncio</p></li>
+<li><p>Построение графиков с plotly и bokeh</p></li>
+<li><p>WEB-фреймворки: Tornado, Flask, Django, aiohttp, FastAPI</p></li>
+</ol>
+</section>
+<section id="graphical-user-interface">
+<h2>Graphical User Interface<a class="headerlink" href="#graphical-user-interface" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Создание графических приложений с tkinter и PySide</p></li>
+<li><p>Events, signal and slots. Observable property.</p></li>
+<li><p>Models and Views. Файловый менеджер как пример MVC.</p></li>
+<li><p>Matplotlib и его интеграция с GUI</p></li>
+<li><p>Конфигурация GUI приложений</p></li>
+</ol>
+</section>
+<section id="x">
+<h2>Базы данныx<a class="headerlink" href="#x" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>СУБД и ACID. DBM. DB API v2.0. SQLite. ORM, CRUD и SQLAlchemy</p></li>
+</ol>
+</section>
+<section id="id10">
+<h2>Взаимодействие с нативным кодом  и оборудованием<a class="headerlink" href="#id10" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Взаимодействие с нативным кодом  и оборудованием: Python.h, ctypes, cffi, Cython, Сборка нативных артефактов в setuptools</p></li>
+<li><p>Взаимодействие с нативным кодом: Numba, SWIG, Boost.Python, Embedded Python. PyROOT и G4Py как примеры.</p></li>
+<li><p>Работа с оборудованием и драйверами. Подключение Си-драйвера через ctypes. HID, FTD32, USB. Модули pyusb, pyserial, pyftdi, pylibftdi. Arduino.</p></li>
+</ol>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Авторские права 2023, Mikhail Zelenyi et al. </p>
+  </div>
+
+  Собрано при помощи <a href="https://www.sphinx-doc.org/">Sphinx</a> с использованием
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">темы,</a>
+    предоставленной <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

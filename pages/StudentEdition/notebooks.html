@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ru" >
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Введение в Python и использование Jupyter Notebook &mdash; документация SPC software courses 2023.09</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../https://fonts.googleapis.com/css?family=Vibur" type="text/css" />
+      <link rel="stylesheet" href="../../_static/jupyterlite_sphinx.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../_static/documentation_options.js?v=209f7d96"></script>
+        <script src="../../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../../_static/jupyterlite_sphinx.js?v=d6bdf5f8"></script>
+        <script src="../../_static/translations.js?v=29b1f277"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Алфавитный указатель" href="../../genindex.html" />
+    <link rel="search" title="Поиск" href="../../search.html" />
+    <link rel="next" title="Методические рекомендации по использованию Python или иных ЯП в лабораторном практикуме" href="../TeacherEdition/introduction.html" />
+    <link rel="prev" title="Вычислительный Python — полезные научные библиотеки" href="../general_python/scikit_py.html" />
+    <link href="../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            SPC software courses
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Поиск в документации" aria-label="Поиск в документации" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Меню навигации">
+              <p class="caption" role="heading"><span class="caption-text">Список материалов:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../laboratory_python.html">Использование Python в лабораторном практикуме</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="introduction.html">Мотивирующая часть: зачем вообще нужно программирование на лабораторных работах</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cards/installation/installation.html">Установка Python и сопутствующего ПО</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cards/run/run.html">Запуск Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general_python/scikit_py.html">Вычислительный Python — полезные научные библиотеки</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Введение в Python и использование Jupyter Notebook</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../TeacherEdition/introduction.html">Методические рекомендации по использованию Python или иных ЯП в лабораторном практикуме</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../beginner_python.html">Начала программирования на Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced_python.html">Продвинутое программирование на Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../laboratory_work/toctree.html">Лабораторные работы по Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference.html">Источники — полезное для саморазвития дополнительное чтение</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../authors.html">Авторы и контакты</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Меню навигации для мобильных устройств" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">SPC software courses</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Навигация по страницам">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../laboratory_python.html">Использование Python в лабораторном практикуме</a></li>
+      <li class="breadcrumb-item active">Введение в Python и использование Jupyter Notebook</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/pages/StudentEdition/notebooks.md.txt" rel="nofollow"> Просмотреть исходный код страницы</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section class="tex2jax_ignore mathjax_ignore" id="python-jupyter-notebook">
+<h1>Введение в Python и использование Jupyter Notebook<a class="headerlink" href="#python-jupyter-notebook" title="Link to this heading"></a></h1>
+<p>Что же пора приступить к практике.
+Демонстрационные блокноты можно скачать локально или запускать на этом сайте.
+Для запуска всех блокнотов в JupyterLab перейдите <a class="reference internal" href="jupyterlite.html"><span class="doc std std-doc">по этой ссылке</span></a></p>
+<p>Для открытия отдельного блокнота перейдите по ссылке из списка:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="01.html"><span class="doc std std-doc">Введение в Python и работа с Jupyter Notebook</span></a></p>
+<ul>
+<li><p>Hello World!</p></li>
+<li><p>Калькулятор</p></li>
+<li><p>Объявление переменных и функций</p></li>
+<li><p>Подключение дополнительных библиотек</p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="02.html"><span class="doc std std-doc">Управляющие выражения</span></a></p>
+<ul>
+<li><p>Структуры данных: списки</p></li>
+<li><p>Условия и циклы</p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="03.html"><span class="doc std std-doc">Парадигмы программирования</span></a></p>
+<ul>
+<li><p>Объектно-ориентированное программирование (ООП)</p></li>
+<li><p>Функциональное программирование (ФП)</p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="04.html"><span class="doc std std-doc">Двигаемся дальше</span></a></p>
+<ul>
+<li><p>Работа с произвольными файлами</p></li>
+<li><p>Еще не много важных вещей о переменных и об объектах (дополнительный материал)</p></li>
+<li><p>Структуры данных: словари и кортежи</p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="05.html"><span class="doc std std-doc">NumPy</span></a></p>
+<ul>
+<li><p>Создание Numpy массивов</p></li>
+<li><p>Арифметические операции с массивами и векторизация</p></li>
+<li><p>Линейная алгебра</p></li>
+<li><p>Операции с индексами</p></li>
+<li><p>Чтение данных</p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="06.html"><span class="doc std std-doc">Работа с файлами, Pandas</span></a></p></li>
+<li><p><a class="reference internal" href="07.html"><span class="doc std std-doc">Построение графиков</span></a></p></li>
+<li><p><a class="reference internal" href="08.html"><span class="doc std std-doc">Вычислительные методы в физике</span></a></p>
+<ul>
+<li><p>Фитирование</p></li>
+<li><p>Гистограммы и распределения</p></li>
+</ul>
+</li>
+</ul>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Нижняя область">
+        <a href="../general_python/scikit_py.html" class="btn btn-neutral float-left" title="Вычислительный Python — полезные научные библиотеки" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Предыдущая</a>
+        <a href="../TeacherEdition/introduction.html" class="btn btn-neutral float-right" title="Методические рекомендации по использованию Python или иных ЯП в лабораторном практикуме" accesskey="n" rel="next">Следующая <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Авторские права 2023, Mikhail Zelenyi et al. </p>
+  </div>
+
+  Собрано при помощи <a href="https://www.sphinx-doc.org/">Sphinx</a> с использованием
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">темы,</a>
+    предоставленной <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

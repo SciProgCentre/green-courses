@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ru" >
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Грамматика Python &mdash; документация SPC software courses 2023.09</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../https://fonts.googleapis.com/css?family=Vibur" type="text/css" />
+      <link rel="stylesheet" href="../../_static/jupyterlite_sphinx.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../_static/documentation_options.js?v=209f7d96"></script>
+        <script src="../../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../../_static/jupyterlite_sphinx.js?v=d6bdf5f8"></script>
+        <script src="../../_static/translations.js?v=29b1f277"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Алфавитный указатель" href="../../genindex.html" />
+    <link rel="search" title="Поиск" href="../../search.html" />
+    <link rel="next" title="Пространство имен и области видимости" href="scopes.html" />
+    <link rel="prev" title="Заголовок PY-файла" href="header.html" />
+    <link href="../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            SPC software courses
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Поиск в документации" aria-label="Поиск в документации" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Меню навигации">
+              <p class="caption" role="heading"><span class="caption-text">Список материалов:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../laboratory_python.html">Использование Python в лабораторном практикуме</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../beginner_python.html">Начала программирования на Python</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../advanced_python.html">Продвинутое программирование на Python</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../pages/advanced_python/2024/hw/toctree.html">Домашняя работа 2024</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../toctree.html">Материалы курса</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../toolchain/development_workflow.html">Организация процесса разработки</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../toolchain/vcs.html">Version Control System (VCS)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../toolchain/docs.html">Документирование программного кода</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../toolchain/ci_cd.html">CI/CD</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../translators/translators.html">Реализации транслятора Python</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../translators/CPython_Jython_Bytecode.html">Интерпретаторы CPython, Jython и их байткод</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../translators/usefull_links.html">Трансляторы: Ccылки на интересные статьи</a></li>
+<li class="toctree-l3"><a class="reference internal" href="header.html">Заголовок PY-файла</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Грамматика Python</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#line-structure">Line structure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#indent">Indent</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#expressions-and-statemens">Expressions and statemens</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#opertors">Opertors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#delimeters">Delimeters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id1"></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#unused-symbols">Unused symbols</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#literals">Literals</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#string-literals">String literals</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="scopes.html">Пространство имен и области видимости</a></li>
+<li class="toctree-l3"><a class="reference internal" href="data_model.html">Python Data Model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../CLI/cmd.html">Создание интерфейса командной строки (CLI) с помощью модуля <code class="docutils literal notranslate"><span class="pre">cmd</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../laboratory_work/toctree.html">Лабораторные работы по Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference.html">Источники — полезное для саморазвития дополнительное чтение</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../authors.html">Авторы и контакты</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Меню навигации для мобильных устройств" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">SPC software courses</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Навигация по страницам">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../advanced_python.html">Продвинутое программирование на Python</a></li>
+          <li class="breadcrumb-item"><a href="../toctree.html">Материалы курса</a></li>
+      <li class="breadcrumb-item active">Грамматика Python</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/cards/lexical_and_syntax/grammar.md.txt" rel="nofollow"> Просмотреть исходный код страницы</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section class="tex2jax_ignore mathjax_ignore" id="python">
+<h1>Грамматика Python<a class="headerlink" href="#python" title="Link to this heading"></a></h1>
+<ul class="simple">
+<li><p>Лексический анализатор разбивает код на токены.</p></li>
+<li><p>Поток токенов преобразуется в AST.</p></li>
+<li><p>AST компилируется в байт-код (ассемблер) для виртуальной машины Python.</p></li>
+<li><p><a class="reference external" href="https://docs.python.org/3/reference/grammar.html">Полная грамматика</a></p></li>
+<li><p><a class="reference external" href="https://peps.python.org/pep-0617/">Переход на новый парсер</a>.</p></li>
+</ul>
+<section id="line-structure">
+<h2>Line structure<a class="headerlink" href="#line-structure" title="Link to this heading"></a></h2>
+<p><strong>Physical line</strong> — заканчивается символом окончания строки (<code class="docutils literal notranslate"><span class="pre">\n</span></code> или <code class="docutils literal notranslate"><span class="pre">\r\n</span></code>).</p>
+<p><strong>Logical lines</strong> — заканчиваться токеном <code class="docutils literal notranslate"><span class="pre">NEW</span> <span class="pre">LINE</span></code>.</p>
+<p>Примеры — несколько физических строк, но одна логическая:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="mi">1900</span> <span class="o">&lt;</span> <span class="n">year</span> <span class="o">&lt;</span> <span class="mi">2100</span> <span class="ow">and</span> <span class="mi">1</span> <span class="o">&lt;=</span> <span class="n">month</span> <span class="o">&lt;=</span> <span class="mi">12</span> \
+   <span class="ow">and</span> <span class="mi">1</span> <span class="o">&lt;=</span> <span class="n">day</span> <span class="o">&lt;=</span> <span class="mi">31</span> <span class="ow">and</span> <span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">hour</span> <span class="o">&lt;</span> <span class="mi">24</span> \
+   <span class="ow">and</span> <span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">minute</span> <span class="o">&lt;</span> <span class="mi">60</span> <span class="ow">and</span> <span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">second</span> <span class="o">&lt;</span> <span class="mi">60</span><span class="p">:</span>   <span class="c1"># Looks like a valid date</span>
+        <span class="k">pass</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">month_names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Januari&#39;</span><span class="p">,</span> <span class="s1">&#39;Februari&#39;</span><span class="p">,</span> <span class="s1">&#39;Maart&#39;</span><span class="p">,</span>      <span class="c1"># These are the</span>
+               <span class="s1">&#39;April&#39;</span><span class="p">,</span>   <span class="s1">&#39;Mei&#39;</span><span class="p">,</span>      <span class="s1">&#39;Juni&#39;</span><span class="p">,</span>       <span class="c1"># Dutch names</span>
+               <span class="s1">&#39;Juli&#39;</span><span class="p">,</span>    <span class="s1">&#39;Augustus&#39;</span><span class="p">,</span> <span class="s1">&#39;September&#39;</span><span class="p">,</span>  <span class="c1"># for the months</span>
+               <span class="s1">&#39;Oktober&#39;</span><span class="p">,</span> <span class="s1">&#39;November&#39;</span><span class="p">,</span> <span class="s1">&#39;December&#39;</span><span class="p">]</span>   <span class="c1"># of the year</span>
+</pre></div>
+</div>
+</section>
+<section id="indent">
+<h2>Indent<a class="headerlink" href="#indent" title="Link to this heading"></a></h2>
+<p>Корректные отступы:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">perm</span><span class="p">(</span><span class="n">l</span><span class="p">):</span>
+        <span class="c1"># Compute the list of all permutations of l</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">l</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">:</span>
+                  <span class="k">return</span> <span class="p">[</span><span class="n">l</span><span class="p">]</span>
+    <span class="n">r</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">l</span><span class="p">)):</span>
+             <span class="n">s</span> <span class="o">=</span> <span class="n">l</span><span class="p">[:</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">l</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">:]</span>
+             <span class="n">p</span> <span class="o">=</span> <span class="n">perm</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+             <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">p</span><span class="p">:</span>
+              <span class="n">r</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">l</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">x</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">r</span>
+</pre></div>
+</div>
+<p>Некорректные:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span> <span class="k">def</span> <span class="nf">perm</span><span class="p">(</span><span class="n">l</span><span class="p">):</span>                       <span class="c1"># error: first line indented</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">l</span><span class="p">)):</span>             <span class="c1"># error: not indented</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="n">l</span><span class="p">[:</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">l</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">:]</span>
+        <span class="n">p</span> <span class="o">=</span> <span class="n">perm</span><span class="p">(</span><span class="n">l</span><span class="p">[:</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">l</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">:])</span>   <span class="c1"># error: unexpected indent</span>
+        <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">p</span><span class="p">:</span>
+                <span class="n">r</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">l</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">x</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">r</span>                <span class="c1"># error: inconsistent dedent</span>
+</pre></div>
+</div>
+</section>
+<section id="expressions-and-statemens">
+<h2>Expressions and statemens<a class="headerlink" href="#expressions-and-statemens" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://docs.python.org/3/reference/expressions.html"><strong>Expressions</strong></a></p></li>
+<li><p><a class="reference external" href="https://docs.python.org/3/reference/simple_stmts.html"><strong>Simple statmenet</strong></a> - помещаются в одну логическую строку, могут идти через <code class="docutils literal notranslate"><span class="pre">;</span></code></p></li>
+<li><p><a class="reference external" href="https://docs.python.org/3/reference/compound_stmts.html"><strong>Compaund statmenet</strong></a> - содержит несколько <strong>simple statement</strong></p></li>
+</ul>
+<p>Можно:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="kc">True</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Нельзя:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="kc">True</span><span class="p">:</span> <span class="k">if</span> <span class="kc">True</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Можно:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="kc">True</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span> <span class="nb">print</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Life hack — <code class="docutils literal notranslate"><span class="pre">;</span></code> убирает лишний вывод в output Jupyter Notebook:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Label&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">();</span>
+</pre></div>
+</div>
+</section>
+<section id="opertors">
+<h2>Opertors<a class="headerlink" href="#opertors" title="Link to this heading"></a></h2>
+<pre><span></span>+       -       *       **      /       //      %      @
+&lt;&lt;      &gt;&gt;      &amp;       |       ^       ~       :=
+&lt;       &gt;       &lt;=      &gt;=      ==      !=
+</pre>
+</section>
+<section id="delimeters">
+<h2>Delimeters<a class="headerlink" href="#delimeters" title="Link to this heading"></a></h2>
+<pre><span></span>(       )       [       ]       {       }
+,       :       .       ;       @       =       -&gt;
++=      -=      *=      /=      //=     %=      @=
+&amp;=      |=      ^=      &gt;&gt;=     &lt;&lt;=     **=
+</pre>
+</section>
+<section id="id1">
+<h2><a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
+<pre><span></span>'       "       #       \
+</pre>
+</section>
+<section id="unused-symbols">
+<h2>Unused symbols<a class="headerlink" href="#unused-symbols" title="Link to this heading"></a></h2>
+<pre><span></span>$       ?       `
+</pre>
+</section>
+<section id="literals">
+<h2>Literals<a class="headerlink" href="#literals" title="Link to this heading"></a></h2>
+<p><a class="reference external" href="https://docs.python.org/3/reference/lexical_analysis.html#literals">literals</a> — Литералы представляют собой константы, включаемые непосредственно в текст программы.</p>
+</section>
+<section id="string-literals">
+<h2>String literals<a class="headerlink" href="#string-literals" title="Link to this heading"></a></h2>
+<div class="highlight-todo notranslate"><div class="highlight"><pre><span></span>Примеры разных литералов
+</pre></div>
+</div>
+<p>Python поддерживает несколько видов строковых литералов:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;Обычная строка</span><span class="se">\n</span><span class="s2">&quot;</span>
+
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Нижняя область">
+        <a href="header.html" class="btn btn-neutral float-left" title="Заголовок PY-файла" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Предыдущая</a>
+        <a href="scopes.html" class="btn btn-neutral float-right" title="Пространство имен и области видимости" accesskey="n" rel="next">Следующая <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Авторские права 2023, Mikhail Zelenyi et al. </p>
+  </div>
+
+  Собрано при помощи <a href="https://www.sphinx-doc.org/">Sphinx</a> с использованием
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">темы,</a>
+    предоставленной <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

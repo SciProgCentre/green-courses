@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ru" >
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Лабораторная работа «Трансляторы Python» &mdash; документация SPC software courses 2023.09</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../https://fonts.googleapis.com/css?family=Vibur" type="text/css" />
+      <link rel="stylesheet" href="../_static/jupyterlite_sphinx.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=209f7d96"></script>
+        <script src="../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../_static/jupyterlite_sphinx.js?v=d6bdf5f8"></script>
+        <script src="../_static/translations.js?v=29b1f277"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Алфавитный указатель" href="../genindex.html" />
+    <link rel="search" title="Поиск" href="../search.html" />
+    <link rel="next" title="Источники — полезное для саморазвития дополнительное чтение" href="../reference.html" />
+    <link rel="prev" title="Лабораторные работы по Python" href="toctree.html" />
+    <link href="../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            SPC software courses
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Поиск в документации" aria-label="Поиск в документации" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Меню навигации">
+              <p class="caption" role="heading"><span class="caption-text">Список материалов:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../laboratory_python.html">Использование Python в лабораторном практикуме</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../beginner_python.html">Начала программирования на Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced_python.html">Продвинутое программирование на Python</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="toctree.html">Лабораторные работы по Python</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Лабораторная работа «Трансляторы Python»</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">Задание</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">Интерпретаторы</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">Тестовые функции</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id4">Чистый Python без аннотаций типов</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id5">Чистый Python с аннотациями типов</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#python-numpy">Python + numpy</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id6">Замер производительности</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../reference.html">Источники — полезное для саморазвития дополнительное чтение</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../authors.html">Авторы и контакты</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Меню навигации для мобильных устройств" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">SPC software courses</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Навигация по страницам">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="toctree.html">Лабораторные работы по Python</a></li>
+      <li class="breadcrumb-item active">Лабораторная работа «Трансляторы Python»</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/laboratory_work/translators.md.txt" rel="nofollow"> Просмотреть исходный код страницы</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section class="tex2jax_ignore mathjax_ignore" id="python">
+<h1>Лабораторная работа «Трансляторы Python»<a class="headerlink" href="#python" title="Link to this heading"></a></h1>
+<p>В данной работе Вам предстоит познакомиться с различными интерпретаторами Python3 на примере задачи вычисления <a class="reference external" href="https://ru.wikipedia.org/wiki/%D0%9C%D0%BD%D0%BE%D0%B6%D0%B5%D1%81%D1%82%D0%B2%D0%BE_%D0%9C%D0%B0%D0%BD%D0%B4%D0%B5%D0%BB%D1%8C%D0%B1%D1%80%D0%BE%D1%82%D0%B0">множества Мандельброта</a>, а так же измерить производительность интерпретатора. Работу интерпретаторов предстоит проверить на трех примерах:</p>
+<ul class="simple">
+<li><p>вычисление на чистом Python без <a class="reference external" href="https://docs.python.org/3/library/typing.html">Typing Hints</a>,</p></li>
+<li><p>с использованием Typing Hints,</p></li>
+<li><p>с использованием библиотеки <code class="docutils literal notranslate"><span class="pre">numpy</span></code>.</p></li>
+</ul>
+<section id="id1">
+<h2>Задание<a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
+<p>Для заданных Вам из данного ниже списка интерпретаторов, необходимо сделать следующие действия:</p>
+<ol class="arabic simple">
+<li><p>Установить интерпретатор, удобным вам способом (если это необходимо).</p></li>
+<li><p>Запустить ими тестовые функции из раздела «Тестовые функции». Если тестовая функция не запускается, объясните причину.</p></li>
+<li><p>Измерьте время выполнения функций с помощью кода из раздела «Замер производительности», а так же полное время работы и запуска скрипта.</p></li>
+</ol>
+</section>
+<section id="id2">
+<h2>Интерпретаторы<a class="headerlink" href="#id2" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p><a class="reference external" href="https://www.python.org/downloads/">CPython</a> - версии 3.8 или 3.9,</p></li>
+<li><p><a class="reference external" href="https://www.python.org/downloads/">CPython</a> - версии 3.11 или 3.12</p></li>
+<li><p><a class="reference external" href="https://downloads.python.org/pypy/">Pypy 5.7</a></p></li>
+<li><p><a class="reference external" href="https://www.pypy.org/download.html">Последний PyPy для Python 3.9</a></p></li>
+<li><p><a class="reference external" href="https://www.jython.org/index">Jython</a></p></li>
+<li><p><a class="reference external" href="https://ironpython.net/download/">Ironpython</a></p></li>
+<li><p><a class="reference external" href="https://github.com/pyodide/pyodide">Pyodide</a></p></li>
+<li><p><a class="reference external" href="https://github.com/jupyter-xeus/xeus-python">Xeus</a></p></li>
+<li><p><a class="reference external" href="https://www.graalvm.org/python/">GraalPy</a></p></li>
+<li><p><a class="reference external" href="https://github.com/pyston/pyston">Pyston</a></p></li>
+</ol>
+</section>
+<section id="id3">
+<h2>Тестовые функции<a class="headerlink" href="#id3" title="Link to this heading"></a></h2>
+<section id="id4">
+<h3>Чистый Python без аннотаций типов<a class="headerlink" href="#id4" title="Link to this heading"></a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">linspace</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">stop</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">yield</span> <span class="n">stop</span>
+        <span class="k">return</span>
+    <span class="n">h</span> <span class="o">=</span> <span class="p">(</span><span class="n">stop</span> <span class="o">-</span> <span class="n">start</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="k">yield</span> <span class="n">start</span> <span class="o">+</span> <span class="n">h</span> <span class="o">*</span> <span class="n">i</span>
+
+<span class="k">def</span> <span class="nf">mandelbrot</span><span class="p">(</span><span class="n">pmin</span> <span class="o">=</span> <span class="o">-</span><span class="mf">2.5</span><span class="p">,</span> <span class="n">pmax</span><span class="o">=</span> <span class="mf">1.5</span><span class="p">,</span> <span class="n">qmin</span> <span class="o">=</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="n">qmax</span><span class="o">=</span> <span class="mi">2</span><span class="p">,</span>
+                <span class="n">ppoints</span> <span class="o">=</span> <span class="mi">200</span><span class="p">,</span> <span class="n">qpoints</span> <span class="o">=</span> <span class="mi">200</span><span class="p">,</span> <span class="n">max_iterations</span> <span class="o">=</span> <span class="mi">300</span><span class="p">,</span> <span class="n">infinity_border</span> <span class="o">=</span> <span class="mi">100</span><span class="p">):</span>
+    <span class="n">image</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">qpoints</span><span class="p">)]</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">ppoints</span><span class="p">)]</span>
+    <span class="k">for</span> <span class="n">ip</span><span class="p">,</span> <span class="n">p</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">linspace</span><span class="p">(</span><span class="n">pmin</span><span class="p">,</span> <span class="n">pmax</span><span class="p">,</span> <span class="n">ppoints</span><span class="p">)):</span>
+        <span class="k">for</span> <span class="n">iq</span><span class="p">,</span> <span class="n">q</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">linspace</span><span class="p">(</span><span class="n">qmin</span><span class="p">,</span> <span class="n">qmax</span><span class="p">,</span> <span class="n">qpoints</span><span class="p">)):</span>
+            <span class="n">c</span> <span class="o">=</span> <span class="n">p</span> <span class="o">+</span> <span class="mi">1</span><span class="n">j</span> <span class="o">*</span> <span class="n">q</span>
+            <span class="n">z</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">max_iterations</span><span class="p">):</span>
+                <span class="n">z</span> <span class="o">=</span> <span class="n">z</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">c</span>
+                <span class="k">if</span> <span class="nb">abs</span><span class="p">(</span><span class="n">z</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">infinity_border</span><span class="p">:</span>
+                    <span class="n">image</span><span class="p">[</span><span class="n">ip</span><span class="p">][</span><span class="n">iq</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+                    <span class="k">break</span>
+    <span class="k">return</span> <span class="n">image</span>
+</pre></div>
+</div>
+</section>
+<section id="id5">
+<h3>Чистый Python с аннотациями типов<a class="headerlink" href="#id5" title="Link to this heading"></a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">linspace</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">stop</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">yield</span> <span class="n">stop</span>
+        <span class="k">return</span>
+    <span class="n">h</span> <span class="o">=</span> <span class="p">(</span><span class="n">stop</span> <span class="o">-</span> <span class="n">start</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="k">yield</span> <span class="n">start</span> <span class="o">+</span> <span class="n">h</span> <span class="o">*</span> <span class="n">i</span>
+
+<span class="k">def</span> <span class="nf">mandelbrot</span><span class="p">(</span><span class="n">pmin</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="o">-</span><span class="mf">2.5</span><span class="p">,</span> <span class="n">pmax</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">1.5</span><span class="p">,</span> <span class="n">qmin</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="n">qmax</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span>
+                <span class="n">ppoints</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">200</span><span class="p">,</span> <span class="n">qpoints</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">200</span><span class="p">,</span> <span class="n">max_iterations</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">300</span><span class="p">,</span> <span class="n">infinity_border</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">100</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">]]:</span>
+
+    <span class="n">image</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">]]</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">qpoints</span><span class="p">)]</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">ppoints</span><span class="p">)]</span>
+    <span class="k">for</span> <span class="n">ip</span><span class="p">,</span> <span class="n">p</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">linspace</span><span class="p">(</span><span class="n">pmin</span><span class="p">,</span> <span class="n">pmax</span><span class="p">,</span> <span class="n">ppoints</span><span class="p">)):</span>
+        <span class="k">for</span> <span class="n">iq</span><span class="p">,</span> <span class="n">q</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">linspace</span><span class="p">(</span><span class="n">qmin</span><span class="p">,</span> <span class="n">qmax</span><span class="p">,</span> <span class="n">qpoints</span><span class="p">)):</span>
+            <span class="n">c</span><span class="p">:</span> <span class="nb">complex</span> <span class="o">=</span> <span class="n">p</span> <span class="o">+</span> <span class="mi">1</span><span class="n">j</span> <span class="o">*</span> <span class="n">q</span>
+            <span class="n">z</span><span class="p">:</span> <span class="nb">complex</span>  <span class="o">=</span> <span class="mi">0</span>
+            <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">max_iterations</span><span class="p">):</span>
+                <span class="n">z</span> <span class="o">=</span> <span class="n">z</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">c</span>
+                <span class="k">if</span> <span class="nb">abs</span><span class="p">(</span><span class="n">z</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">infinity_border</span><span class="p">:</span>
+                    <span class="n">image</span><span class="p">[</span><span class="n">ip</span><span class="p">][</span><span class="n">iq</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+                    <span class="k">break</span>
+    <span class="k">return</span> <span class="n">image</span>
+</pre></div>
+</div>
+</section>
+<section id="python-numpy">
+<h3>Python + numpy<a class="headerlink" href="#python-numpy" title="Link to this heading"></a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="k">def</span> <span class="nf">mandelbrot</span><span class="p">(</span><span class="n">pmin</span> <span class="o">=</span> <span class="o">-</span><span class="mf">2.5</span><span class="p">,</span> <span class="n">pmax</span> <span class="o">=</span> <span class="mf">1.5</span><span class="p">,</span> <span class="n">qmin</span> <span class="o">=</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="n">qmax</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span>
+            <span class="n">ppoints</span> <span class="o">=</span> <span class="mi">200</span><span class="p">,</span> <span class="n">qpoints</span> <span class="o">=</span> <span class="mi">200</span><span class="p">,</span> <span class="n">max_iterations</span> <span class="o">=</span> <span class="mi">300</span><span class="p">,</span> <span class="n">infinity_border</span><span class="o">=</span> <span class="mi">100</span><span class="p">):</span>
+
+    <span class="n">image</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">ppoints</span><span class="p">,</span> <span class="n">qpoints</span><span class="p">))</span>
+
+    <span class="k">for</span> <span class="n">ip</span><span class="p">,</span> <span class="n">p</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">pmin</span><span class="p">,</span> <span class="n">pmax</span><span class="p">,</span> <span class="n">ppoints</span><span class="p">)):</span>
+        <span class="k">for</span> <span class="n">iq</span><span class="p">,</span> <span class="n">q</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">qmin</span><span class="p">,</span> <span class="n">qmax</span><span class="p">,</span> <span class="n">qpoints</span><span class="p">)):</span>
+            <span class="n">c</span> <span class="o">=</span> <span class="n">p</span> <span class="o">+</span> <span class="mi">1</span><span class="n">j</span> <span class="o">*</span> <span class="n">q</span>
+            <span class="n">z</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">max_iterations</span><span class="p">):</span>
+                <span class="n">z</span> <span class="o">=</span> <span class="n">z</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">c</span>
+                <span class="k">if</span> <span class="nb">abs</span><span class="p">(</span><span class="n">z</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">infinity_border</span><span class="p">:</span>
+
+                    <span class="n">image</span><span class="p">[</span><span class="n">ip</span><span class="p">,</span> <span class="n">iq</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+                    <span class="k">break</span>
+    <span class="k">return</span> <span class="n">image</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="id6">
+<h2>Замер производительности<a class="headerlink" href="#id6" title="Link to this heading"></a></h2>
+<p>Для замера времени выполнения самой функции, используйте код ниже:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tic</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter_ns</span><span class="p">()</span>
+<span class="n">image</span> <span class="o">=</span> <span class="n">mandelbrot</span><span class="p">()</span>
+<span class="n">toc</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter_ns</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">((</span><span class="n">toc</span> <span class="o">-</span> <span class="n">tic</span><span class="p">)</span><span class="o">/</span><span class="mi">1_000_000_000</span><span class="p">,</span> <span class="s2">&quot;s&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Помимо описанного, вам необходимо подобным способом провести измерения времени выполнения функции вместе с запуском всего скрипта и интерпретатора.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">time</span> <span class="n">python3</span> <span class="n">your_script</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Нижняя область">
+        <a href="toctree.html" class="btn btn-neutral float-left" title="Лабораторные работы по Python" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Предыдущая</a>
+        <a href="../reference.html" class="btn btn-neutral float-right" title="Источники — полезное для саморазвития дополнительное чтение" accesskey="n" rel="next">Следующая <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Авторские права 2023, Mikhail Zelenyi et al. </p>
+  </div>
+
+  Собрано при помощи <a href="https://www.sphinx-doc.org/">Sphinx</a> с использованием
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">темы,</a>
+    предоставленной <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

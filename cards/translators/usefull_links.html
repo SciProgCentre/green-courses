@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ru" >
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Трансляторы: Ccылки на интересные статьи &mdash; документация SPC software courses 2023.09</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../https://fonts.googleapis.com/css?family=Vibur" type="text/css" />
+      <link rel="stylesheet" href="../../_static/jupyterlite_sphinx.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../_static/documentation_options.js?v=209f7d96"></script>
+        <script src="../../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../../_static/jupyterlite_sphinx.js?v=d6bdf5f8"></script>
+        <script src="../../_static/translations.js?v=29b1f277"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Алфавитный указатель" href="../../genindex.html" />
+    <link rel="search" title="Поиск" href="../../search.html" />
+    <link rel="next" title="Заголовок PY-файла" href="../lexical_and_syntax/header.html" />
+    <link rel="prev" title="Интерпретаторы CPython, Jython и их байткод" href="CPython_Jython_Bytecode.html" />
+    <link href="../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            SPC software courses
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Поиск в документации" aria-label="Поиск в документации" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Меню навигации">
+              <p class="caption" role="heading"><span class="caption-text">Список материалов:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../laboratory_python.html">Использование Python в лабораторном практикуме</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../beginner_python.html">Начала программирования на Python</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../advanced_python.html">Продвинутое программирование на Python</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../pages/advanced_python/2024/hw/toctree.html">Домашняя работа 2024</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../toctree.html">Материалы курса</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../toolchain/development_workflow.html">Организация процесса разработки</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../toolchain/vcs.html">Version Control System (VCS)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../toolchain/docs.html">Документирование программного кода</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../toolchain/ci_cd.html">CI/CD</a></li>
+<li class="toctree-l3"><a class="reference internal" href="translators.html">Реализации транслятора Python</a></li>
+<li class="toctree-l3"><a class="reference internal" href="CPython_Jython_Bytecode.html">Интерпретаторы CPython, Jython и их байткод</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Трансляторы: Ccылки на интересные статьи</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#python-bytecode">Об устройстве, ускорении Python и его bytecode.</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#python">Простой компилятор на Python</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id1">О компиляции в нативный код</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../lexical_and_syntax/header.html">Заголовок PY-файла</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lexical_and_syntax/grammar.html">Грамматика Python</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lexical_and_syntax/scopes.html">Пространство имен и области видимости</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lexical_and_syntax/data_model.html">Python Data Model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../CLI/cmd.html">Создание интерфейса командной строки (CLI) с помощью модуля <code class="docutils literal notranslate"><span class="pre">cmd</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../laboratory_work/toctree.html">Лабораторные работы по Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference.html">Источники — полезное для саморазвития дополнительное чтение</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../authors.html">Авторы и контакты</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Меню навигации для мобильных устройств" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">SPC software courses</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Навигация по страницам">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../advanced_python.html">Продвинутое программирование на Python</a></li>
+          <li class="breadcrumb-item"><a href="../toctree.html">Материалы курса</a></li>
+      <li class="breadcrumb-item active">Трансляторы: Ccылки на интересные статьи</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/cards/translators/usefull_links.md.txt" rel="nofollow"> Просмотреть исходный код страницы</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section class="tex2jax_ignore mathjax_ignore" id="cc">
+<h1>Трансляторы: Ccылки на интересные статьи<a class="headerlink" href="#cc" title="Link to this heading"></a></h1>
+<section id="python-bytecode">
+<h2>Об устройстве, ускорении Python и его bytecode.<a class="headerlink" href="#python-bytecode" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://habr.com/ru/articles/845314/">Python: как переменные работают на самом деле? Погружаемся в байткод и C</a></p></li>
+<li><p><a class="reference external" href="https://habr.com/ru/articles/662087/">Ускорение производительности Python в 3.11</a></p></li>
+<li><p><a class="reference external" href="https://habr.com/ru/articles/314062/">Как устроен парсер Python, и как втрое уменьшить потребление им памяти</a></p></li>
+</ul>
+</section>
+<section id="python">
+<h2>Простой компилятор на Python<a class="headerlink" href="#python" title="Link to this heading"></a></h2>
+<p>Внимание это не компилятор Python, а компилятор написанный на Python.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://habr.com/ru/articles/786158/">Компилятор за выходные: синтаксические деревья</a></p></li>
+<li><p><a class="reference external" href="https://habr.com/ru/articles/787800/">Компилятор за выходные: лексер и парсер</a></p></li>
+<li><p><a class="reference external" href="https://habr.com/ru/articles/787442/">Про́клятый огонь, или магия препроцессора C</a></p></li>
+<li><p><a class="reference external" href="https://habr.com/ru/articles/789310/">Компилятор за выходные: таблицы символов</a></p></li>
+<li><p><a class="reference external" href="https://habr.com/ru/articles/793524/">Компилятор за выходные: избавляемся от переменных</a></p></li>
+<li><p><a class="reference external" href="https://habr.com/ru/articles/829314/">Компилятор за выходные: наконец-то ассемблер</a></p></li>
+</ul>
+</section>
+<section id="id1">
+<h2>О компиляции в нативный код<a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://habr.com/ru/companies/timeweb/articles/784534/">Эльфы и пингвины: что такое ELF и как он работает в Linux?</a></p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Нижняя область">
+        <a href="CPython_Jython_Bytecode.html" class="btn btn-neutral float-left" title="Интерпретаторы CPython, Jython и их байткод" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Предыдущая</a>
+        <a href="../lexical_and_syntax/header.html" class="btn btn-neutral float-right" title="Заголовок PY-файла" accesskey="n" rel="next">Следующая <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Авторские права 2023, Mikhail Zelenyi et al. </p>
+  </div>
+
+  Собрано при помощи <a href="https://www.sphinx-doc.org/">Sphinx</a> с использованием
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">темы,</a>
+    предоставленной <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

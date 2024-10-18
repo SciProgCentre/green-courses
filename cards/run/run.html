@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ru" >
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Запуск Python &mdash; документация SPC software courses 2023.09</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../https://fonts.googleapis.com/css?family=Vibur" type="text/css" />
+      <link rel="stylesheet" href="../../_static/jupyterlite_sphinx.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../_static/documentation_options.js?v=209f7d96"></script>
+        <script src="../../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../../_static/jupyterlite_sphinx.js?v=d6bdf5f8"></script>
+        <script src="../../_static/translations.js?v=29b1f277"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Алфавитный указатель" href="../../genindex.html" />
+    <link rel="search" title="Поиск" href="../../search.html" />
+    <link rel="next" title="Вычислительный Python — полезные научные библиотеки" href="../../pages/general_python/scikit_py.html" />
+    <link rel="prev" title="Запуск Python в браузере без установки и без запуска кода на удалённом сервере" href="../installation/wasm_python.html" />
+    <link href="../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            SPC software courses
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Поиск в документации" aria-label="Поиск в документации" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Меню навигации">
+              <p class="caption" role="heading"><span class="caption-text">Список материалов:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../laboratory_python.html">Использование Python в лабораторном практикуме</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../pages/StudentEdition/introduction.html">Мотивирующая часть: зачем вообще нужно программирование на лабораторных работах</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../installation/installation.html">Установка Python и сопутствующего ПО</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Запуск Python</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">Написание и запуск отдельных программ на Python</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#python-notebook">Python Notebook</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#google-colab">Google Colab</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#c-conda">Установка пакетов c <code class="docutils literal notranslate"><span class="pre">conda</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../pages/general_python/scikit_py.html">Вычислительный Python — полезные научные библиотеки</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../pages/StudentEdition/notebooks.html">Введение в Python и использование Jupyter Notebook</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../pages/TeacherEdition/introduction.html">Методические рекомендации по использованию Python или иных ЯП в лабораторном практикуме</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../beginner_python.html">Начала программирования на Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced_python.html">Продвинутое программирование на Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../laboratory_work/toctree.html">Лабораторные работы по Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference.html">Источники — полезное для саморазвития дополнительное чтение</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../authors.html">Авторы и контакты</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Меню навигации для мобильных устройств" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">SPC software courses</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Навигация по страницам">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../laboratory_python.html">Использование Python в лабораторном практикуме</a></li>
+      <li class="breadcrumb-item active">Запуск Python</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/cards/run/run.md.txt" rel="nofollow"> Просмотреть исходный код страницы</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section class="tex2jax_ignore mathjax_ignore" id="python">
+<h1>Запуск Python<a class="headerlink" href="#python" title="Link to this heading"></a></h1>
+<p>Есть два основных способа работать с Python: это запуск кода, написанного на Python, как отдельной программы и запуск Python-кода в различных интерактивных окружениях (таких, как блокнот <a class="reference external" href="https://jupyter.org">Jupyter Notebook</a>).</p>
+<section id="id1">
+<h2>Написание и запуск отдельных программ на Python<a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
+<p>Код на Python пишется в текстовых файлах с <a class="reference external" href="https://ru.wikipedia.org/wiki/%D0%A0%D0%B0%D1%81%D1%88%D0%B8%D1%80%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B8%D0%BC%D0%B5%D0%BD%D0%B8_%D1%84%D0%B0%D0%B9%D0%BB%D0%B0">расширением</a> <code class="docutils literal notranslate"><span class="pre">.py</span></code>.
+Для примера создайте файл <code class="docutils literal notranslate"><span class="pre">hello_mipt.py</span></code>, откройте его в текстовом редакторе и напишите в нем:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello MIPT&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Сохраните файл, откройте терминал, перейдите в директорию с файлом <code class="docutils literal notranslate"><span class="pre">hello_mipt.py</span></code> (<a class="reference external" href="https://ru.wikipedia.org/wiki/%D0%9F%D1%83%D1%82%D1%8C_%D0%BA_%D1%84%D0%B0%D0%B9%D0%BB%D1%83">путь к файлу</a>)) и выполните команду:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>hello_mipt.py
+</pre></div>
+</div>
+<p>Тем самым вы скажете интерпретатору Python исполнить код, записанный в файле <code class="docutils literal notranslate"><span class="pre">hello_mipt.py</span></code>.</p>
+<p>Программа на Python может быть записана в нескольких файлах (в этом случае для запуска нужно использовать файл с началом программы) и использовать код из библиотек, идущих в комплекте с Python или полученных из других источников (например, входящие в дистрибутив <code class="docutils literal notranslate"><span class="pre">Anaconda</span></code>).</p>
+<p>Существуют специальные программы для редактирования и запуска кода (например VsCode, Atom, PyCharm, больше описано <a class="reference external" href="https://ru.wikipedia.org/wiki/%D0%A1%D1%80%D0%B0%D0%B2%D0%BD%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B8%D0%BD%D1%82%D0%B5%D0%B3%D1%80%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%BD%D1%8B%D1%85_%D1%81%D1%80%D0%B5%D0%B4_%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B8#Python">здесь</a>). Инструкцию для скачивания, а также документацию можно найти на официальных сайтах этих программ.</p>
+<p>Не будем подробно останавливаться на работе с такими файлами, потому что для обработки данных гораздо удобнее использовать Python Notebook.</p>
+</section>
+<section id="python-notebook">
+<h2>Python Notebook<a class="headerlink" href="#python-notebook" title="Link to this heading"></a></h2>
+<p><a class="reference external" href="https://jupyter.org">Jupyter Notebook</a> — это веб-приложение (иначе говоря программа работающая в вашем веб-браузере), которое позволяет создавать рабочие тетради (файлы расширением <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code>), которые содержат код, уравнения, графики и текст (с разрешения вашего преподавателя, его можно использовать для создания лабораторных отчетов).
+Для создания, чтения и редактирования файлов нужно:</p>
+<ul class="simple">
+<li><p>Windows: открыть программу <code class="docutils literal notranslate"><span class="pre">Anaconda</span> <span class="pre">Navigator</span></code>, выбрать <code class="docutils literal notranslate"><span class="pre">Jupyter</span> <span class="pre">Notebook</span></code>.</p></li>
+<li><p>MacOs: открыть программу <code class="docutils literal notranslate"><span class="pre">Anaconda</span> <span class="pre">Navigator</span></code>, выбрать <code class="docutils literal notranslate"><span class="pre">Jupyter</span> <span class="pre">Notebook</span></code>. В браузере откроется окно, в котором можно будет выбрать нужную директорию и открыть файл. Второй способ: открыть терминал, запустить команду <code class="docutils literal notranslate"><span class="pre">jupyter-notebook</span></code>.</p></li>
+<li><p>Linux: открыть терминал, запустить команду <code class="docutils literal notranslate"><span class="pre">jupyter-notebook</span></code>.</p></li>
+</ul>
+<p>В браузере откроется окно, в котором можно будет выбрать нужную директорию и открыть нужную рабочую тетрадь (или создать новую).</p>
+</section>
+<section id="google-colab">
+<h2>Google Colab<a class="headerlink" href="#google-colab" title="Link to this heading"></a></h2>
+<p>Онлайн-ноутбук <a class="reference external" href="https://colab.research.google.com/notebooks/welcome.ipynb#recent=true">Google Colab</a> позволяет создавать, открывать и редактировать файлы типа <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> без установки какого-либо программного обеспечения на компьютер.</p>
+</section>
+<section id="c-conda">
+<h2>Установка пакетов c <code class="docutils literal notranslate"><span class="pre">conda</span></code><a class="headerlink" href="#c-conda" title="Link to this heading"></a></h2>
+<p>Использование чужого кода экономит много времени, поэтому были созданы <a class="reference external" href="https://pythonworld.ru/osnovy/pip.html">пакеты</a> — наборы файлов с кодом, который можно использовать в своей программе, и пакетные менеджеры — специальные программы, которые позволяют легко скачивать и использовать пакеты. У конкретного языка может вообще не быть пакетных менеджеров (C++), а может быть несколько, как в питоне(<code class="docutils literal notranslate"><span class="pre">pip</span></code>, <code class="docutils literal notranslate"><span class="pre">conda</span></code>).</p>
+<p><code class="docutils literal notranslate"><span class="pre">сonda</span></code> — это программа, называемая пакетным менеджером, её функция заключается в управлении установкой и удалением других программ или <a class="reference external" href="https://ru.wikipedia.org/wiki/%D0%91%D0%B8%D0%B1%D0%BB%D0%B8%D0%BE%D1%82%D0%B5%D0%BA%D0%B0_(%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5)">библиотек</a>, а также управлении <a class="reference external" href="https://ru.wikipedia.org/wiki/%D0%9F%D0%B5%D1%80%D0%B5%D0%BC%D0%B5%D0%BD%D0%BD%D0%B0%D1%8F_%D1%81%D1%80%D0%B5%D0%B4%D1%8B">окружением</a>, в котором вы будете производить разработку программ. Вместо того, чтобы вручную устанавливать библиотеки, как, например, в C++, мы можем использовать Conda для установки Python и его библиотек из централизованных хранилищ. Данная программа имеет <a class="reference external" href="https://ru.wikipedia.org/wiki/%D0%9E%D1%82%D0%BA%D1%80%D1%8B%D1%82%D0%BE%D0%B5_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%BD%D0%BE%D0%B5_%D0%BE%D0%B1%D0%B5%D1%81%D0%BF%D0%B5%D1%87%D0%B5%D0%BD%D0%B8%D0%B5">открытый исходный код</a> и может использоваться для установки библиотек не только Python, но многих других языков.</p>
+<p>Для того, что бы установить пакет с названием <code class="docutils literal notranslate"><span class="pre">&quot;package_name&quot;</span></code> нужно открыть терминал и ввести:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>install<span class="w"> </span>package_name
+</pre></div>
+</div>
+<p>Например:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>install<span class="w"> </span><span class="nv">python</span><span class="o">=</span><span class="m">3</span>.7<span class="w"> </span>numpy<span class="w"> </span>scipy
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Нижняя область">
+        <a href="../installation/wasm_python.html" class="btn btn-neutral float-left" title="Запуск Python в браузере без установки и без запуска кода на удалённом сервере" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Предыдущая</a>
+        <a href="../../pages/general_python/scikit_py.html" class="btn btn-neutral float-right" title="Вычислительный Python — полезные научные библиотеки" accesskey="n" rel="next">Следующая <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Авторские права 2023, Mikhail Zelenyi et al. </p>
+  </div>
+
+  Собрано при помощи <a href="https://www.sphinx-doc.org/">Sphinx</a> с использованием
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">темы,</a>
+    предоставленной <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

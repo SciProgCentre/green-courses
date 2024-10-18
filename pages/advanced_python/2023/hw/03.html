@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ru" >
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Домашняя работа № 3 (9 p.) &mdash; документация SPC software courses 2023.09</title>
+      <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../https://fonts.googleapis.com/css?family=Vibur" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/jupyterlite_sphinx.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../../_static/documentation_options.js?v=209f7d96"></script>
+        <script src="../../../../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../../../../_static/jupyterlite_sphinx.js?v=d6bdf5f8"></script>
+        <script src="../../../../_static/translations.js?v=29b1f277"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Алфавитный указатель" href="../../../../genindex.html" />
+    <link rel="search" title="Поиск" href="../../../../search.html" />
+    <link href="../../../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../index.html" class="icon icon-home">
+            SPC software courses
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Поиск в документации" aria-label="Поиск в документации" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Меню навигации">
+              <p class="caption" role="heading"><span class="caption-text">Список материалов:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../laboratory_python.html">Использование Python в лабораторном практикуме</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../beginner_python.html">Начала программирования на Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../advanced_python.html">Продвинутое программирование на Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../laboratory_work/toctree.html">Лабораторные работы по Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../reference.html">Источники — полезное для саморазвития дополнительное чтение</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../authors.html">Авторы и контакты</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Меню навигации для мобильных устройств" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">SPC software courses</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Навигация по страницам">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Домашняя работа № 3 (9 p.)</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../_sources/pages/advanced_python/2023/hw/03.md.txt" rel="nofollow"> Просмотреть исходный код страницы</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section class="tex2jax_ignore mathjax_ignore" id="o-3-9-p">
+<h1>Домашняя работа № 3 (9 p.)<a class="headerlink" href="#o-3-9-p" title="Link to this heading"></a></h1>
+<p><strong>Перед выполнением домашней работы вытяните и слейте изменения из моего оригинального репозитория</strong>
+<strong>Для тестирования вашего кода используйте существующие тесты из директории tests или добавьте свои</strong></p>
+<p>Для работы с устройствами в нашем SCADA-фреймворке мы определим класс <code class="docutils literal notranslate"><span class="pre">Device</span></code>
+который будет представлять интерфейс для произвольного прибора. Определим следующие понятия:</p>
+<ul class="simple">
+<li><p><strong>trait</strong> — изменяемое свойство устройства, которое опционально может быть считано из устройства
+или наоборот записано в прибор.</p></li>
+<li><p><strong>action</strong> — действие, которое может выполнить устройство.</p></li>
+<li><p><strong>логический уровень</strong> — текущие значение traits устройства в программе.</p></li>
+<li><p><strong>физические уровень</strong> — реальные значения trits устройства.</p></li>
+</ul>
+<p>Таким образом объект представляющий устройство описывает traits и actions этого устройств,
+а так же связывает физический и логический уровень.</p>
+<ol class="arabic simple">
+<li><p>(1 p.) В модуле <code class="docutils literal notranslate"><span class="pre">controls/device.py</span></code> превратите класс <code class="docutils literal notranslate"><span class="pre">DeviceLifecycleState</span></code> в перечисление,
+описывающий одно из трёх состояний прибора: <code class="docutils literal notranslate"><span class="pre">INIT</span></code>, <code class="docutils literal notranslate"><span class="pre">OPEN</span></code>, <code class="docutils literal notranslate"><span class="pre">CLOSE</span></code>.</p></li>
+<li><p>(1 p.) В модуле <code class="docutils literal notranslate"><span class="pre">controls/device.py</span></code> в классе <code class="docutils literal notranslate"><span class="pre">Device</span></code> выполните следующий условия:</p>
+<ol class="arabic simple">
+<li><p>Сделайте класс <code class="docutils literal notranslate"><span class="pre">Device</span></code> абстрактным.</p></li>
+<li><p>Методы <code class="docutils literal notranslate"><span class="pre">trait_descriptors</span></code> и <code class="docutils literal notranslate"><span class="pre">action_descriptors</span></code> сделайте abstract property.</p></li>
+</ol>
+</li>
+</ol>
+<p>Считывание/запись данных с/в устройства/о можно проводить синхронным или асинхронным образом. Определим класс
+<code class="docutils literal notranslate"><span class="pre">SynchronyDevice</span></code> описывающий синхронное взаимодействие с устройством. В нем определенны абстрактные методы
+для работы с traits и actions устройства (см. docstring методов).</p>
+<ol class="arabic simple" start="3">
+<li><p>В модуле <code class="docutils literal notranslate"><span class="pre">equipment/turtle_device.py</span></code> реализуйте класс <code class="docutils literal notranslate"><span class="pre">TurtleDevice</span></code>
+(для генерации заготовок абстрактных методов можно использовать иструменты IDE).
+С помощью экземпляров этого класса мы будем управлять черепашкой (объектом класс <code class="docutils literal notranslate"><span class="pre">Turtle</span></code> из модуля <code class="docutils literal notranslate"><span class="pre">turtle</span></code>).
+Реализуйте следующее поведение:</p>
+<ol class="arabic simple">
+<li><p>(1 p.) В методах <code class="docutils literal notranslate"><span class="pre">open</span></code> и <code class="docutils literal notranslate"><span class="pre">close</span></code> должен создаваться и уничтожаться объект черепашки, не забудьте вызвать родительские методы для изменения состояния устройства.</p></li>
+<li><p>(3 p.) Свойства <code class="docutils literal notranslate"><span class="pre">trait_descriptors</span></code> и <code class="docutils literal notranslate"><span class="pre">action_descriptors</span></code> должны возвращать описания traits и actions черепашки согласно заданной сигнатуре методов. Traits черепашки это её публичные аттрибуты и они доступны только на чтение. Actions черепашки это её публичные методы. Описания должны генерироваться автоматически путем анализа класса черепашки.</p></li>
+<li><p>(3 p.) Реализуйте методы <code class="docutils literal notranslate"><span class="pre">read</span></code>, <code class="docutils literal notranslate"><span class="pre">write</span></code>, <code class="docutils literal notranslate"><span class="pre">execute</span></code>, <code class="docutils literal notranslate"><span class="pre">__getitem__</span></code>, <code class="docutils literal notranslate"><span class="pre">invalidate</span></code>. Значения полей объекта черепашка считайте физическим уровнем. При необходимости вызывайте реализацию родительского метода.</p></li>
+</ol>
+</li>
+</ol>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Авторские права 2023, Mikhail Zelenyi et al. </p>
+  </div>
+
+  Собрано при помощи <a href="https://www.sphinx-doc.org/">Sphinx</a> с использованием
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">темы,</a>
+    предоставленной <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

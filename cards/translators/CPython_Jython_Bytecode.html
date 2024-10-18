@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ru" >
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Интерпретаторы CPython, Jython и их байткод &mdash; документация SPC software courses 2023.09</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../https://fonts.googleapis.com/css?family=Vibur" type="text/css" />
+      <link rel="stylesheet" href="../../_static/jupyterlite_sphinx.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../_static/documentation_options.js?v=209f7d96"></script>
+        <script src="../../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../../_static/jupyterlite_sphinx.js?v=d6bdf5f8"></script>
+        <script src="../../_static/translations.js?v=29b1f277"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Алфавитный указатель" href="../../genindex.html" />
+    <link rel="search" title="Поиск" href="../../search.html" />
+    <link rel="next" title="Трансляторы: Ccылки на интересные статьи" href="usefull_links.html" />
+    <link rel="prev" title="Реализации транслятора Python" href="translators.html" />
+    <link href="../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            SPC software courses
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Поиск в документации" aria-label="Поиск в документации" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Меню навигации">
+              <p class="caption" role="heading"><span class="caption-text">Список материалов:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../laboratory_python.html">Использование Python в лабораторном практикуме</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../beginner_python.html">Начала программирования на Python</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../advanced_python.html">Продвинутое программирование на Python</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../pages/advanced_python/2024/hw/toctree.html">Домашняя работа 2024</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../toctree.html">Материалы курса</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../toolchain/development_workflow.html">Организация процесса разработки</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../toolchain/vcs.html">Version Control System (VCS)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../toolchain/docs.html">Документирование программного кода</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../toolchain/ci_cd.html">CI/CD</a></li>
+<li class="toctree-l3"><a class="reference internal" href="translators.html">Реализации транслятора Python</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Интерпретаторы CPython, Jython и их байткод</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#python">Типичный путь Python кода</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#bytecode-python-vm">Bytecode Python VM</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#bytecode">Компилируем в bytecode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id1">Компиляция с дополнительными опциями</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#bytecode-dis">Смотрим ByteCode наглядно с модулем <code class="docutils literal notranslate"><span class="pre">dis</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="usefull_links.html">Трансляторы: Ccылки на интересные статьи</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lexical_and_syntax/header.html">Заголовок PY-файла</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lexical_and_syntax/grammar.html">Грамматика Python</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lexical_and_syntax/scopes.html">Пространство имен и области видимости</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lexical_and_syntax/data_model.html">Python Data Model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../CLI/cmd.html">Создание интерфейса командной строки (CLI) с помощью модуля <code class="docutils literal notranslate"><span class="pre">cmd</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../laboratory_work/toctree.html">Лабораторные работы по Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference.html">Источники — полезное для саморазвития дополнительное чтение</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../authors.html">Авторы и контакты</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Меню навигации для мобильных устройств" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">SPC software courses</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Навигация по страницам">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../advanced_python.html">Продвинутое программирование на Python</a></li>
+          <li class="breadcrumb-item"><a href="../toctree.html">Материалы курса</a></li>
+      <li class="breadcrumb-item active">Интерпретаторы CPython, Jython и их байткод</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/cards/translators/CPython_Jython_Bytecode.md.txt" rel="nofollow"> Просмотреть исходный код страницы</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section class="tex2jax_ignore mathjax_ignore" id="cpython-jython">
+<h1>Интерпретаторы CPython, Jython и их байткод<a class="headerlink" href="#cpython-jython" title="Link to this heading"></a></h1>
+<ul class="simple">
+<li><p>CPython — написан на С, что позволяет легкую интеграция модулей на Си в Python.</p></li>
+<li><p>Jython — написан на Java, <strong>не компилирует</strong> Python в байт-код JVM, но позволяет интеграцию JVM модулей в Python.</p></li>
+</ul>
+<section id="python">
+<h2>Типичный путь Python кода<a class="headerlink" href="#python" title="Link to this heading"></a></h2>
+<figure class="align-default">
+<img alt="https://www.plantuml.com/plantuml/svg/FP7BIiD068NtUOgVh5feVG0NKknE40J1LJSn6IyG9vAaQ12XQK5TA5agkl0L8XXQ4zkymZzlv9aPqyKmcSlvpfTabAHUd4wlGYSMVkh9yr2GEpxAqej83kZ0pEwTG-vnD8rzGUCe4DJRkSxex38KITybBw5UOWxxkCOVN76jSbwfHwumrxpY7-AIrnWD5aiR2SMjY7LYFqk5eV8tDweWsqqdX_RUAOvz71lu6w_L7DWPjnWLdalrWAg2EeeDWOtxreg6GNGZXtja6dT1-UGDCb0ZtgWdA7rXewQ9rDgceVn_XPnBrx71BQOJqgHt17-vHGhcrcG03DHugHROV3QASmBlHLUf6RRXhN9LWDonjd0qQUuh35grq8uJQJnQD3NuXXN6ocJldP6G0VxS7m==" src="https://www.plantuml.com/plantuml/svg/FP7BIiD068NtUOgVh5feVG0NKknE40J1LJSn6IyG9vAaQ12XQK5TA5agkl0L8XXQ4zkymZzlv9aPqyKmcSlvpfTabAHUd4wlGYSMVkh9yr2GEpxAqej83kZ0pEwTG-vnD8rzGUCe4DJRkSxex38KITybBw5UOWxxkCOVN76jSbwfHwumrxpY7-AIrnWD5aiR2SMjY7LYFqk5eV8tDweWsqqdX_RUAOvz71lu6w_L7DWPjnWLdalrWAg2EeeDWOtxreg6GNGZXtja6dT1-UGDCb0ZtgWdA7rXewQ9rDgceVn_XPnBrx71BQOJqgHt17-vHGhcrcG03DHugHROV3QASmBlHLUf6RRXhN9LWDonjd0qQUuh35grq8uJQJnQD3NuXXN6ocJldP6G0VxS7m==" />
+</figure>
+</section>
+<section id="bytecode-python-vm">
+<h2>Bytecode Python VM<a class="headerlink" href="#bytecode-python-vm" title="Link to this heading"></a></h2>
+<p><strong>bytecode</strong>:</p>
+<ul class="simple">
+<li><p>Python source code is compiled into bytecode, the internal representation of a Python program in the CPython interpreter.</p></li>
+<li><p>The bytecode is also cached in .pyc files so that executing the same file is faster the second time (recompilation from source to bytecode can be avoided).</p></li>
+</ul>
+<ul class="simple">
+<li><p>This “intermediate language” is said to run on a virtual machine that executes the machine code corresponding to each bytecode.</p></li>
+<li><p>Do note that bytecodes are not expected to work between different Python virtual machines, nor to be stable between Python releases.</p></li>
+</ul>
+</section>
+<section id="bytecode">
+<h2>Компилируем в bytecode<a class="headerlink" href="#bytecode" title="Link to this heading"></a></h2>
+<p><span class="xref myst">Откроем проект</span> и запустим файл <code class="docutils literal notranslate"><span class="pre">compile_example.py</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python3</span> <span class="n">compile_example</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+<p>А затем исследуем содержимое директории проекта:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>.
+├── compile_example.py
+├── spc
+│   ├── __init__.py
+│   ├── mandelbrot.py
+│   ├── __pycache__
+│   │   ├── __init__.cpython-311.pyc
+│   │   ├── mandelbrot.cpython-311.pyc
+│   │   └── run.cpython-311.pyc
+│   └── run.py
+</pre></div>
+</div>
+<p>В корне пакета <code class="docutils literal notranslate"><span class="pre">spc</span></code> появилась директория <code class="docutils literal notranslate"><span class="pre">__pycache__</span></code> в которой содержатся файлы с байткодом.</p>
+</section>
+<section id="id1">
+<h2>Компиляция с дополнительными опциями<a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
+<p>Python позволяет компилировать с дополнительными опциями:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python3</span> <span class="o">-</span><span class="n">O</span> <span class="n">compile_example</span><span class="o">.</span><span class="n">py</span>
+<span class="c1"># remove assert and __debug__-dependent statements;</span>
+<span class="c1"># or</span>
+<span class="n">python3</span> <span class="o">-</span><span class="n">OO</span> <span class="n">compile_example</span><span class="o">.</span><span class="n">py</span>
+<span class="c1"># do -O changes and also discard docstrings</span>
+</pre></div>
+</div>
+</section>
+<section id="bytecode-dis">
+<h2>Смотрим ByteCode наглядно с модулем <code class="docutils literal notranslate"><span class="pre">dis</span></code><a class="headerlink" href="#bytecode-dis" title="Link to this heading"></a></h2>
+
+                <div
+                    class="jupyterlite_sphinx_iframe_container"
+                    style="width: 100%; height: 600px;"
+                    onclick="window.jupyterliteShowIframe(
+                        '9ac2a76f-83d7-412f-96d1-d5797e719bc0',
+                        window.jupyterliteConcatSearchParams('../../lite/repl/index.html?kernel=pyodide&code=import%20dis%0A%0Adef%20add%28a%2C%20b%29%3A%0A%20%20%20%20return%20abs%28a%29%20%2B%20abs%28b%29%0A%0Aprint%28dis.dis%28add%29%29%0Aprint%28dis.opmap%5B%22LOAD_GLOBAL%22%5D%29%3B%20%23%20optcode', false)
+                    )"
+                >
+                    <div
+                        id=9ac2a76f-83d7-412f-96d1-d5797e719bc0
+                        class="jupyterlite_sphinx_try_it_button jupyterlite_sphinx_try_it_button_unclicked"
+                        style="background-color: #dc3545;"
+                    >
+                    Try Replite!
+                    </div>
+                </div>
+            <div class="highlight-todo notranslate"><div class="highlight"><pre><span></span>import dis
+dis.dis(&quot;a=1;a+=1;&quot;)
+dis.dis(&quot;a=1;a = a + 1;&quot;)
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Нижняя область">
+        <a href="translators.html" class="btn btn-neutral float-left" title="Реализации транслятора Python" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Предыдущая</a>
+        <a href="usefull_links.html" class="btn btn-neutral float-right" title="Трансляторы: Ccылки на интересные статьи" accesskey="n" rel="next">Следующая <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Авторские права 2023, Mikhail Zelenyi et al. </p>
+  </div>
+
+  Собрано при помощи <a href="https://www.sphinx-doc.org/">Sphinx</a> с использованием
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">темы,</a>
+    предоставленной <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

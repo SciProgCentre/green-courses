@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ru" >
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Консоли, терминалы и комндные оболочки &mdash; документация SPC software courses 2023.09</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../https://fonts.googleapis.com/css?family=Vibur" type="text/css" />
+      <link rel="stylesheet" href="../../_static/jupyterlite_sphinx.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../_static/documentation_options.js?v=209f7d96"></script>
+        <script src="../../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../../_static/jupyterlite_sphinx.js?v=d6bdf5f8"></script>
+        <script src="../../_static/translations.js?v=29b1f277"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Алфавитный указатель" href="../../genindex.html" />
+    <link rel="search" title="Поиск" href="../../search.html" />
+    <link href="../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            SPC software courses
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Поиск в документации" aria-label="Поиск в документации" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Меню навигации">
+              <p class="caption" role="heading"><span class="caption-text">Список материалов:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../laboratory_python.html">Использование Python в лабораторном практикуме</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../beginner_python.html">Начала программирования на Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced_python.html">Продвинутое программирование на Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../laboratory_work/toctree.html">Лабораторные работы по Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference.html">Источники — полезное для саморазвития дополнительное чтение</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../authors.html">Авторы и контакты</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Меню навигации для мобильных устройств" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">SPC software courses</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Навигация по страницам">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Консоли, терминалы и комндные оболочки</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/cards/toolchain/console.md.txt" rel="nofollow"> Просмотреть исходный код страницы</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section class="tex2jax_ignore mathjax_ignore" id="id1">
+<h1>Консоли, терминалы и комндные оболочки<a class="headerlink" href="#id1" title="Link to this heading"></a></h1>
+<p>Консоль в операционной системе — это интерфейс, который позволяет пользователю взаимодействовать с операционной системой посредством ввода команд в текстовом режиме. Консоли часто используются для выполнения задач, требующих административного доступа, работы с файлами и директориями, запуска программ, а также для выполнения скриптов и автоматизации процессов.</p>
+<p>Основные аспекты консоли включают:</p>
+<ol class="arabic simple">
+<li><p><strong>Командная строка</strong>: Основной элемент консоли, где пользователь вводит команды. Командная строка обычно представляет собой строку текста с индикатором готовности (например, <code class="docutils literal notranslate"><span class="pre">$</span></code> в Unix-подобных системах или <code class="docutils literal notranslate"><span class="pre">C:\&gt;</span></code> в Windows), после которого пользователь может вводить команды.</p></li>
+<li><p><strong>Оболочка (shell)</strong>: Программа, которая обрабатывает команды, введенные пользователем. В Unix-подобных системах популярны оболочки Bash, Zsh, и Fish. В Windows используется Command Prompt (cmd.exe) и PowerShell.</p></li>
+<li><p><strong>Команды</strong>: Текстовые инструкции, которые пользователь вводит в консоли для выполнения определенных действий. Например, в Unix-подобных системах команда <code class="docutils literal notranslate"><span class="pre">ls</span></code> отображает список файлов и директорий в текущей директории, а в Windows команда <code class="docutils literal notranslate"><span class="pre">dir</span></code> выполняет аналогичную функцию.</p></li>
+<li><p><strong>Скрипты</strong>: Наборы команд, записанные в файл, которые могут выполняться как единое целое. Это позволяет автоматизировать выполнение часто повторяющихся задач.</p></li>
+<li><p><strong>Перенаправление ввода/вывода</strong>: Возможность перенаправления ввода и вывода команд в файлы или другие команды. Например, <code class="docutils literal notranslate"><span class="pre">ls</span> <span class="pre">&gt;</span> <span class="pre">file_list.txt</span></code> сохранит вывод команды <code class="docutils literal notranslate"><span class="pre">ls</span></code> в файл <code class="docutils literal notranslate"><span class="pre">file_list.txt</span></code>.</p></li>
+</ol>
+<p>Консольные интерфейсы часто используются в администрировании систем, программировании, и решении различных технических задач, так как они позволяют более гибко и точно управлять операционной системой по сравнению с графическими интерфейсами.</p>
+<section id="id2">
+<h2>Отличие консоли от терминала<a class="headerlink" href="#id2" title="Link to this heading"></a></h2>
+<p>Консоль и терминал — это два связанных, но разных понятия в контексте операционных систем и пользовательских интерфейсов.</p>
+<section id="id3">
+<h3>Консоль<a class="headerlink" href="#id3" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p><strong>Консоль</strong> - это общее понятие, которое обозначает интерфейс для взаимодействия с операционной системой через текстовые команды.</p></li>
+<li><p><strong>Физическая консоль</strong>: В историческом контексте консоль — это физическое устройство, состоящее из монитора и клавиатуры, подключенное напрямую к компьютеру или серверу.</p></li>
+<li><p><strong>Виртуальная консоль</strong>: В современных операционных системах это может быть текстовый режим на мониторе, к которому можно переключиться с графического интерфейса. Например, в Linux можно переключаться между виртуальными консолями с помощью клавиш <code class="docutils literal notranslate"><span class="pre">Ctrl</span> <span class="pre">+</span> <span class="pre">Alt</span> <span class="pre">+</span> <span class="pre">F1</span></code> до <code class="docutils literal notranslate"><span class="pre">Ctrl</span> <span class="pre">+</span> <span class="pre">Alt</span> <span class="pre">+</span> <span class="pre">F6</span></code>.</p></li>
+</ol>
+</section>
+<section id="id4">
+<h3>Терминал<a class="headerlink" href="#id4" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p><strong>Терминал</strong> - это устройство или программа, которая предоставляет интерфейс для ввода и вывода данных, взаимодействующих с системой или удаленным компьютером.</p></li>
+<li><p><strong>Физический терминал</strong>: В прошлом терминалы были отдельными устройствами (например, телетайпы, видео-дисплейные терминалы), которые подключались к основному компьютеру или мейнфрейму.</p></li>
+<li><p><strong>Эмулятор терминала</strong>: В современных системах терминалы обычно представляют собой программы, которые эмулируют поведение старых физических терминалов. Примеры включают GNOME Terminal, Konsole, Windows Terminal, и т.д.</p></li>
+</ol>
+</section>
+<section id="id5">
+<h3>Основные различия<a class="headerlink" href="#id5" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p><strong>Консоль как физическое устройство</strong>:</p>
+<ul class="simple">
+<li><p>Включает монитор и клавиатуру, подключенные напрямую к компьютеру.</p></li>
+<li><p>Управление осуществляется непосредственно на этом устройстве.</p></li>
+</ul>
+</li>
+<li><p><strong>Терминал как программное обеспечение</strong>:</p>
+<ul class="simple">
+<li><p>Эмулирует поведение физических терминалов.</p></li>
+<li><p>Используется для доступа к командной оболочке (shell).</p></li>
+<li><p>Могут подключаться к удаленным системам по протоколам вроде SSH.</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="id6">
+<h3>Взаимосвязь<a class="headerlink" href="#id6" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><strong>Терминал и командная оболочка</strong>: Терминал запускает оболочку (например, Bash, Zsh в Unix-подобных системах или PowerShell в Windows), через которую пользователь вводит команды. Оболочка интерпретирует команды и взаимодействует с операционной системой.</p></li>
+<li><p><strong>Виртуальные консоли и терминалы</strong>: В Unix-подобных системах виртуальные консоли могут быть доступны через комбинации клавиш и предоставлять текстовый интерфейс, подобный терминалу, но обычно с более низким уровнем функциональности и без возможности работы в графическом режиме.</p></li>
+</ul>
+</section>
+<section id="id7">
+<h3>Пример<a class="headerlink" href="#id7" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><strong>Консоль</strong>: Включение и работа на сервере через текстовый интерфейс, который отображается непосредственно на экране сервера.</p></li>
+<li><p><strong>Терминал</strong>: Открытие программы GNOME Terminal на рабочем столе Linux, чтобы взаимодействовать с системой или подключаться к удаленному серверу через SSH.</p></li>
+</ul>
+<p>Таким образом, консоль более общее понятие, включающее физические и виртуальные интерфейсы для текстового взаимодействия, тогда как терминал чаще относится к программам, которые предоставляют такой интерфейс.</p>
+</section>
+</section>
+<section id="id8">
+<h2>Командные оболочки<a class="headerlink" href="#id8" title="Link to this heading"></a></h2>
+<p>Командные оболочки (shell) — это программы, которые предоставляют текстовый интерфейс для взаимодействия с операционной системой. Существуют различные оболочки, каждая из которых имеет свои особенности, синтаксис и возможности. Вот некоторые из наиболее распространенных командных оболочек:</p>
+<section id="unix">
+<h3>Unix-подобные системы<a class="headerlink" href="#unix" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p><strong>Bash (Bourne Again Shell)</strong>:</p>
+<ul class="simple">
+<li><p>Наиболее распространенная оболочка в Linux.</p></li>
+<li><p>Совместима с Bourne Shell (sh), но обладает дополнительными функциями и улучшениями.</p></li>
+<li><p>Поддерживает скрипты и автоматизацию задач.</p></li>
+<li><p>Используется по умолчанию в большинстве дистрибутивов Linux.</p></li>
+</ul>
+</li>
+<li><p><strong>Zsh (Z Shell)</strong>:</p>
+<ul class="simple">
+<li><p>Расширяет возможности Bash, предлагая больше настроек и функций.</p></li>
+<li><p>Поддерживает автодополнение команд и аргументов.</p></li>
+<li><p>Включает мощные функции для работы с командной историей и плагинами (например, Oh My Zsh).</p></li>
+</ul>
+</li>
+<li><p><strong>Fish (Friendly Interactive Shell)</strong>:</p>
+<ul class="simple">
+<li><p>Ориентирована на удобство использования.</p></li>
+<li><p>Поддерживает синтаксическую подсветку и автодополнение.</p></li>
+<li><p>Не полностью совместима с POSIX, что может ограничить выполнение некоторых скриптов.</p></li>
+</ul>
+</li>
+<li><p><strong>Tcsh (Tenex C Shell)</strong>:</p>
+<ul class="simple">
+<li><p>Улучшенная версия C Shell (csh).</p></li>
+<li><p>Поддерживает командную историю и автодополнение.</p></li>
+<li><p>Использует синтаксис, похожий на язык программирования C.</p></li>
+</ul>
+</li>
+<li><p><strong>Ksh (Korn Shell)</strong>:</p>
+<ul class="simple">
+<li><p>Совместима с Bourne Shell (sh) и обладает дополнительными возможностями.</p></li>
+<li><p>Часто используется в коммерческих Unix-системах.</p></li>
+<li><p>Поддерживает скрипты и автоматизацию задач.</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="windows">
+<h3>Windows<a class="headerlink" href="#windows" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p><strong>Command Prompt (cmd.exe)</strong>:</p>
+<ul class="simple">
+<li><p>Стандартная оболочка для Windows.</p></li>
+<li><p>Поддерживает базовые команды и пакетные файлы (.bat).</p></li>
+<li><p>Ограничена по сравнению с современными оболочками.</p></li>
+</ul>
+</li>
+<li><p><strong>PowerShell</strong>:</p>
+<ul class="simple">
+<li><p>Мощная оболочка и скриптовый язык, разработанный Microsoft.</p></li>
+<li><p>Интегрируется с .NET Framework и поддерживает сложные сценарии автоматизации.</p></li>
+<li><p>Обладает более мощными возможностями по сравнению с cmd.exe.</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="id9">
+<h3>Другие<a class="headerlink" href="#id9" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p><strong>Dash (Debian Almquist Shell)</strong>:</p>
+<ul class="simple">
+<li><p>Легковесная и быстрая оболочка, совместимая с POSIX.</p></li>
+<li><p>Часто используется в Debian и Ubuntu для выполнения скриптов в init-скриптах.</p></li>
+</ul>
+</li>
+<li><p><strong>Csh (C Shell)</strong>:</p>
+<ul class="simple">
+<li><p>Одна из ранних оболочек Unix.</p></li>
+<li><p>Имеет синтаксис, похожий на язык программирования C.</p></li>
+<li><p>Меньше используется сегодня по сравнению с более современными оболочками.</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="id10">
+<h3>Пример использования<a class="headerlink" href="#id10" title="Link to this heading"></a></h3>
+<ul>
+<li><p><strong>Bash</strong>:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Hello, World!&quot;</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong>PowerShell</strong>:</p>
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="nb">Write-Output</span> <span class="s2">&quot;Hello, World!&quot;</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong>Fish</strong>:</p>
+<div class="highlight-fish notranslate"><div class="highlight"><pre><span></span><span class="k">echo</span> <span class="s2">&quot;Hello, World!&quot;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<p>Каждая оболочка имеет свои особенности и преимущества, и выбор оболочки часто зависит от предпочтений пользователя и конкретных задач.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Авторские права 2023, Mikhail Zelenyi et al. </p>
+  </div>
+
+  Собрано при помощи <a href="https://www.sphinx-doc.org/">Sphinx</a> с использованием
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">темы,</a>
+    предоставленной <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

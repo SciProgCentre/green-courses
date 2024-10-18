@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ru" >
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Общие рекомендации и требования к использованию Python &mdash; документация SPC software courses 2023.09</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../https://fonts.googleapis.com/css?family=Vibur" type="text/css" />
+      <link rel="stylesheet" href="../../_static/jupyterlite_sphinx.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../_static/documentation_options.js?v=209f7d96"></script>
+        <script src="../../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../../_static/jupyterlite_sphinx.js?v=d6bdf5f8"></script>
+        <script src="../../_static/translations.js?v=29b1f277"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Алфавитный указатель" href="../../genindex.html" />
+    <link rel="search" title="Поиск" href="../../search.html" />
+    <link rel="next" title="Оформление электронного отчета в рабочей тетради Jupyter Notebook" href="usage_jupyter.html" />
+    <link rel="prev" title="Методические рекомендации по использованию Python или иных ЯП в лабораторном практикуме" href="introduction.html" />
+    <link href="../../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            SPC software courses
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Поиск в документации" aria-label="Поиск в документации" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Меню навигации">
+              <p class="caption" role="heading"><span class="caption-text">Список материалов:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../laboratory_python.html">Использование Python в лабораторном практикуме</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../StudentEdition/introduction.html">Мотивирующая часть: зачем вообще нужно программирование на лабораторных работах</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cards/installation/installation.html">Установка Python и сопутствующего ПО</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cards/run/run.html">Запуск Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general_python/scikit_py.html">Вычислительный Python — полезные научные библиотеки</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../StudentEdition/notebooks.html">Введение в Python и использование Jupyter Notebook</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="introduction.html">Методические рекомендации по использованию Python или иных ЯП в лабораторном практикуме</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Общие рекомендации и требования к использованию Python</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usage_jupyter.html">Оформление электронного отчета в рабочей тетради Jupyter Notebook</a></li>
+<li class="toctree-l3"><a class="reference internal" href="plot.html">Рекомендации по проверке графиков и диаграмм</a></li>
+<li class="toctree-l3"><a class="reference internal" href="example_fit.html">Пример дополнительного задания к лабораторной работе</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../beginner_python.html">Начала программирования на Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced_python.html">Продвинутое программирование на Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../laboratory_work/toctree.html">Лабораторные работы по Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference.html">Источники — полезное для саморазвития дополнительное чтение</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../authors.html">Авторы и контакты</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Меню навигации для мобильных устройств" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">SPC software courses</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Навигация по страницам">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../laboratory_python.html">Использование Python в лабораторном практикуме</a></li>
+          <li class="breadcrumb-item"><a href="introduction.html">Методические рекомендации по использованию Python или иных ЯП в лабораторном практикуме</a></li>
+      <li class="breadcrumb-item active">Общие рекомендации и требования к использованию Python</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/pages/TeacherEdition/general.md.txt" rel="nofollow"> Просмотреть исходный код страницы</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section class="tex2jax_ignore mathjax_ignore" id="python">
+<h1>Общие рекомендации и требования к использованию Python<a class="headerlink" href="#python" title="Link to this heading"></a></h1>
+<p>Python достаточно простой язык, с высокой степенью интерактивности, внесение изменений  в программу производиться достаточно быстро, поэтому справедливым является требование от студента уметь исправить ошибки «здесь и сейчас».</p>
+<p>Python имеет встроенную систему документации, поэтому работа с ним вполне возможна в отсутствие интернета или других методических руководств.</p>
+<p>По требованию преподавателя студент должен предоставить код программы и исходные данные.</p>
+<p>Студент должен уметь объяснить, что делает тот или иной код или функция. Если используется функция для какой-либо вычислительной процедуры, то студент должен уметь объяснить, что это за процедура, какие она использует входные данные и что является результатом процедуры. Например, если студент использует интерполяцию данных с помощью кубических сплайнов, то он должен уметь объяснить, что такое интерполяция и что такое кубический сплайн, который он получил в результате.</p>
+<p>Использование компьютерных методов расширяет возможности по обработке данных лабораторных работ, поэтому допустимо сформулировать дополнительное задание к работе, позволяющее улучшить методику работы. Например, в лабораторной работе, посвященной компьютерной гамма-спектрометрии, используется специальная программа для нахождения точного положения пиков полного поглощения с помощью фитирования пика. В качестве дополнительного задания можно предложить студентам не использовать эту программу, а скачать данные и попытатся профитировать пики самостоятельно с помощью Python, пример задания можно посмотреть <span class="xref myst">здесь</span>.</p>
+<p>Так же использование компьютерных методов расширяют возможности для подготовки вопроса по выбору. Студент может:</p>
+<ul class="simple">
+<li><p>дополнить свой ответ численным моделированием физического явления;</p></li>
+<li><p>сделать наглядную визуализацию или демонстрацию;</p></li>
+<li><p>улучшить точность лабораторной работы за счет более сложного анализа данных;</p></li>
+<li><p>использовать Python для взаимодействия с вашим демонстрационным устройством.</p></li>
+</ul>
+<p>В зависимости от курса студентам могу быть предложены дополнительные задания с использованием следующих разделов:</p>
+<ul class="simple">
+<li><p>Интерполяция и экстраполяция;</p></li>
+<li><p>Решение оптимизационных задач, фитирование;</p></li>
+<li><p>Фурье-анализ и обработка цифровых сигналов;</p></li>
+<li><p>Продвинутая математическая статистика: использование критериев согласия и распределений отличных от нормального;</p></li>
+<li><p>Численное решение задач сеточными методами и методами Монте-Карло.</p></li>
+</ul>
+<p>Студентам предлагается два варианта использования Python: в виде отдельных программ и в виде рабочих тетрадей <a class="reference external" href="https://jupyter.org">Jupyter Notebook</a>.</p>
+<p>В первом случае студент использует свои сценарии на Python для обработки данных и построения графиков и полученные результаты размещает в своем отчете, а сами сценарии служат приложением к отчету.</p>
+<p>Во-втором случае студент может поступать так же как и в первом случае, а может с разрешения преподавателя использовать Jupyter Notebook для оформления отчета в электронном виде. Рабочие тетради Jupyter Notebook могут содержать в себе код, уравнения, графики и текст, то есть позволяют оформить полноценный отчет, который имеет большую степень интерактивности и возможность быстро расширить свое содержание какими-то дополнительными вычислениями. Кроме того, на основе рабочий тетради может быть создана презентация, что может быть использовано, если преподаватель допускает такой формат сдачи работы. Больше о Jupyter Notebook в следующем разделе.</p>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Нижняя область">
+        <a href="introduction.html" class="btn btn-neutral float-left" title="Методические рекомендации по использованию Python или иных ЯП в лабораторном практикуме" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Предыдущая</a>
+        <a href="usage_jupyter.html" class="btn btn-neutral float-right" title="Оформление электронного отчета в рабочей тетради Jupyter Notebook" accesskey="n" rel="next">Следующая <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Авторские права 2023, Mikhail Zelenyi et al. </p>
+  </div>
+
+  Собрано при помощи <a href="https://www.sphinx-doc.org/">Sphinx</a> с использованием
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">темы,</a>
+    предоставленной <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
